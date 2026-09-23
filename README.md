@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zentro — sitio web
 
-## Getting Started
+Sitio institucional de **Zentro**, agencia de marketing, branding y producción audiovisual.
 
-First, run the development server:
+Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · pnpm.
+
+## Requisitos
+
+- Node.js 20 o superior
+- pnpm 11 (`corepack enable` activa la versión fijada en `package.json`)
+
+## Puesta en marcha
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+cp .env.example .env.local   # completar los valores
+pnpm dev                     # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Variables de entorno
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Variable | Uso |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | URL pública; se usa en metadata, sitemap y JSON-LD. |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Número en formato E.164 para los enlaces de WhatsApp. |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Correo visible en el footer. |
+| `RESEND_API_KEY` | Clave de [Resend](https://resend.com) para el formulario de contacto. Sin ella, el formulario ofrece escribir por WhatsApp. |
+| `CONTACT_EMAIL_FROM` | Remitente verificado en Resend. |
+| `CONTACT_EMAIL_TO` | Bandeja que recibe los mensajes del formulario. |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+| Comando | Descripción |
+| --- | --- |
+| `pnpm dev` | Servidor de desarrollo. |
+| `pnpm build` | Build de producción. |
+| `pnpm start` | Sirve el build de producción. |
+| `pnpm lint` | ESLint. |
+| `npx tsc --noEmit` | Verificación de tipos. |
 
-To learn more about Next.js, take a look at the following resources:
+## Estructura
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+app/          rutas, API de contacto, íconos del sitio, robots/sitemap y estilos globales
+components/   componentes por página (home, servicios, planes, contactos, terminos), layout y shared
+hooks/        hooks reutilizables
+lib/          configuración, mensajes de WhatsApp, validación y rate limit
+data/         contenido editable (JSON)
+types/        tipos del contenido
+public/       brand, icons, shapes, images, videos y og-image
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contenido
 
-## Deploy on Vercel
+Los textos, precios, clientes y testimonios se editan en `data/*.json`; no hace falta tocar componentes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Despliegue
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pensado para Vercel o cualquier hosting de Node compatible con Next.js: configurar las variables de entorno y ejecutar `pnpm build`. El límite de envíos del formulario es en memoria (por instancia); para varias instancias conviene reemplazarlo por un almacenamiento compartido (p. ej. Redis).

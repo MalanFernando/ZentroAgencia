@@ -1,0 +1,310 @@
+{
+  "hero": {
+    "title": "Planes a la medida\nde tus objetivos",
+    "paragraph": "Para negocios que buscan una comunicación sólida, constante y orientada a resultados."
+  },
+  "families": [
+    {
+      "slug": "impulso",
+      "name": "Impulso",
+      "familyTagline": "Para negocios y empresas que buscan una comunicación más sólida, constante y orientada a resultados.",
+      "cardDescription": "Para negocios que buscan una comunicación sólida y constante.",
+      "tiers": [
+        { "id": "impulso-1", "label": "Plan Impulso I", "price": 150 },
+        { "id": "impulso-2", "label": "Plan Impulso II", "price": 220 },
+        { "id": "impulso-3", "label": "Plan Impulso III", "price": 295 }
+      ],
+      "rows": [
+        {
+          "label": "Análisis y estrategia mensual",
+          "values": [
+            "Análisis y creación de estrategia para crecimiento en redes sociales.",
+            "Análisis del negocio, contenido y estrategia mensual.",
+            "Análisis, estrategia y enfoque comercial para redes sociales."
+          ]
+        },
+        { "label": "Publicaciones mensuales", "values": ["7 publicaciones.", "10 publicaciones.", "13 publicaciones."] },
+        { "label": "Plataformas", "values": ["Instagram, Facebook y TikTok.", "Instagram, Facebook y TikTok.", "Instagram, Facebook y TikTok."] },
+        { "label": "Videos comerciales", "values": ["1 video de 25 a 45 seg.", "2 videos de 25 a 45 seg.", "3 videos de 25 a 45 seg."] },
+        {
+          "label": "Producción audiovisual",
+          "values": [
+            "Cámaras Canon, lentes, audio e iluminación profesional.",
+            "Producción Canon + accesorios + dron.",
+            "Producción Canon completa + dron estratégico."
+          ]
+        },
+        { "label": "Diseños visuales", "values": ["4 diseños.", "5 diseños.", "6 diseños."] },
+        { "label": "Historias", "values": ["2 historias mensuales.", "3 historias mensuales.", "4 historias mensuales."] },
+        { "label": "Campañas publicitarias", "values": ["Campañas configuradas.", "Campañas gestionadas.", "Campañas optimizadas."] },
+        { "label": "Reporte mensual", "values": ["Revisión básica de resultados.", "Reporte mensual básico.", "Reporte básico con mejoras."] }
+      ]
+    },
+    {
+      "slug": "esencia",
+      "name": "Esencia",
+      "familyTagline": "Manejo integral de redes sociales durante todo el mes para negocios y empresas que buscan contenido constante, estrategia y mejor producción.",
+      "cardDescription": "Estrategia integral, contenido constante y mejor producción.",
+      "tiers": [
+        { "id": "esencia-1", "label": "Plan Esencia I", "price": 345 },
+        { "id": "esencia-2", "label": "Plan Esencia II", "price": 415 },
+        { "id": "esencia-3", "label": "Plan Esencia III", "price": 490 }
+      ],
+      "rows": [
+        {
+          "label": "Análisis y estrategia mensual",
+          "values": [
+            "Análisis del negocio y estrategia de contenido.",
+            "Análisis de competencia y estrategia mensual.",
+            "Estrategia integral de comunicación y crecimiento."
+          ]
+        },
+        { "label": "Publicaciones mensuales", "values": ["15 publicaciones.", "18 publicaciones.", "21 publicaciones."] },
+        { "label": "Plataformas", "values": ["Instagram, Facebook y TikTok.", "Instagram, Facebook y TikTok.", "Instagram, Facebook y TikTok."] },
+        { "label": "Videos comerciales", "values": ["4 videos de 25 a 45 seg.", "5 videos de 25 a 45 seg.", "6 videos de 25 a 45 seg."] },
+        {
+          "label": "Producción audiovisual",
+          "values": [
+            "Producción Canon completa + dron estratégico.",
+            "Producción Canon completa + dron estratégico.",
+            "Producción Canon completa + dron estratégico."
+          ]
+        },
+        { "label": "Diseños visuales", "values": ["6 diseños.", "7 diseños.", "8 diseños."] },
+        { "label": "Historias", "values": ["5 historias mensuales.", "6 historias mensuales.", "7 historias mensuales."] },
+        { "label": "Campañas publicitarias", "values": ["Campañas optimizadas.", "Campañas optimizadas.", "Campañas optimizadas."] },
+        { "label": "Reporte mensual", "values": ["Reporte mensual de resultados.", "Reporte con mejoras.", "Reporte estratégico + reunión."] }
+      ]
+    },
+    {
+      "slug": "zentro",
+      "name": "Zentro",
+      "familyTagline": "Manejo integral de redes sociales durante todo el mes para empresas y negocios que necesitan estrategia, producción profesional y crecimiento medible.",
+      "cardDescription": "Para empresas que necesitan crecimiento escalable y dirección.",
+      "tiers": [
+        { "id": "zentro-1", "label": "Plan Zentro I", "price": 540 },
+        { "id": "zentro-2", "label": "Plan Zentro II", "price": 610 },
+        { "id": "zentro-3", "label": "Plan Zentro III", "price": 680 }
+      ],
+      "rows": [
+        {
+          "label": "Análisis y estrategia mensual",
+          "values": [
+            "Análisis estratégico y enfoque de comunicación.",
+            "Estrategia integral de contenido y posicionamiento.",
+            "Estrategia avanzada de crecimiento digital."
+          ]
+        },
+        { "label": "Publicaciones mensuales", "values": ["22 publicaciones.", "25 publicaciones.", "28 publicaciones."] },
+        { "label": "Plataformas", "values": ["Instagram, Facebook y TikTok.", "Instagram, Facebook y TikTok.", "Instagram, Facebook y TikTok."] },
+        { "label": "Videos comerciales", "values": ["6 videos de 25 a 45 seg.", "7 videos de 25 a 45 seg.", "8 videos de 25 a 45 seg."] },
+        {
+          "label": "Producción audiovisual",
+          "values": [
+            "Producción profesional completa.",
+            "Producción completa + dirección visual.",
+            "Producción completa + dirección creativa."
+          ]
+        },
+        { "label": "Diseños visuales", "values": ["8 diseños.", "9 diseños.", "10 diseños."] },
+        { "label": "Historias", "values": ["8 historias mensuales.", "9 historias mensuales.", "10 historias mensuales."] },
+        { "label": "Campañas publicitarias", "values": ["Campañas con seguimiento mensual.", "Campañas con seguimiento mensual.", "Campañas con seguimiento mensual."] },
+        { "label": "Reporte mensual", "values": ["Reporte estratégico de resultados.", "Reporte + lectura de campañas.", "Reporte avanzado + proyección."] }
+      ]
+    }
+  ],
+  "terms": {
+    "impulso": {
+      "familyName": "Zentro Impulso",
+      "paragraphs": [
+        "Los planes Impulso incluyen manejo integral de redes sociales durante el mes según el alcance contratado. La inversión publicitaria no está incluida. Grabaciones adicionales, locaciones extra, jornadas extendidas, plataformas adicionales, campañas extra o cambios fuera de la planificación mensual se cotizan por separado. Los valores no incluyen IVA."
+      ]
+    },
+    "esencia": {
+      "familyName": "Zentro Esencia",
+      "paragraphs": [
+        "Los planes Zentro Esencia incluyen manejo integral de redes sociales durante el mes, según el alcance contratado. Incluyen análisis, estrategia mensual, producción audiovisual, edición, diseño de piezas visuales, publicaciones, gestión de 2 campañas publicitarias y revisión de resultados.",
+        "La inversión publicitaria no está incluida en el valor mensual del servicio. Grabaciones adicionales, jornadas extendidas, locaciones extra, plataformas adicionales, campañas extra, cambios fuera de la planificación mensual o servicios no contemplados en el plan serán cotizados por separado. El contenido no utilizado dentro del mes no es acumulable. Los valores no incluyen IVA."
+      ]
+    },
+    "zentro": {
+      "familyName": "Zentro",
+      "paragraphs": [
+        "Los planes Zentro incluyen manejo integral de redes sociales durante el mes, según el alcance contratado. Incluyen análisis estratégico, creación de estrategia mensual, producción audiovisual profesional, edición, diseño de piezas visuales, publicaciones, gestión de campañas publicitarias ilimitadas y revisión de resultados.",
+        "La inversión publicitaria no está incluida en el valor mensual del servicio. Las campañas aplican a la gestión, configuración, seguimiento y optimización dentro del mes, pero no incluyen creación ilimitada de videos, piezas visuales, copys o materiales adicionales fuera del plan.",
+        "Grabaciones adicionales, jornadas extendidas, locaciones extra, plataformas adicionales, cambios fuera de la planificación mensual o servicios no contemplados serán cotizados por separado. El contenido no utilizado dentro del mes no es acumulable. Los valores no incluyen IVA."
+      ]
+    }
+  },
+  "catalogs": [
+    {
+      "id": "individual",
+      "title": "Zentro individual",
+      "description": "Servicios puntuales para marcas que necesitan soluciones específicas con enfoque estratégico y profesional.",
+      "groups": [
+        {
+          "id": "estrategia",
+          "items": [
+            { "id": "opt-1", "title": "Análisis del mercado digital", "description": "Estudio estratégico del entorno comercial de la marca para identificar oportunidades, comportamiento del consumidor, tendencias y situación actual del mercado.", "kind": "single", "price": 60 },
+            { "id": "opt-2", "title": "Análisis de la competencia", "description": "Evaluación de 5 competidores directos e indirectos para detectar fortalezas, debilidades, oportunidades de diferenciación y posibles ventajas para la marca.", "kind": "single", "price": 55 },
+            { "id": "opt-3", "title": "Planificación contenido estratégico", "description": "Organización y estructuración del contenido a publicar en redes sociales con base en objetivos, tipo de público, comunicación de marca y estrategia digital.", "kind": "single", "price": 55 }
+          ]
+        },
+        {
+          "id": "fotografia",
+          "heading": "Fotografía profesional",
+          "description": "Producción fotográfica orientada a mostrar productos, servicios, espacios o marca de forma profesional, atractiva y alineada a la identidad visual del negocio. Sin incluir edición.",
+          "items": [
+            {
+              "id": "opt-foto",
+              "title": "Fotografía profesional",
+              "kind": "options",
+              "note": "La edición por cada fotografía tiene un valor unitario adicional de $9.",
+              "options": [
+                { "id": "opt-4", "label": "x30 Fotografías", "price": 55 },
+                { "id": "opt-5", "label": "x60 Fotografías", "price": 95 },
+                { "id": "opt-6", "label": "x90 Fotografías", "price": 135 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "grabacion",
+          "heading": "Grabación de video",
+          "description": "Servicio de captación audiovisual profesional enfocado únicamente en la grabación de tomas, según la duración y necesidades del proyecto. Sin incluir edición.",
+          "items": [
+            {
+              "id": "opt-grabacion",
+              "title": "Grabación de video",
+              "kind": "options",
+              "note": "La edición se cotiza por separado en el bloque de Edición y postproducción.",
+              "options": [
+                { "id": "opt-7", "label": "1 hora", "price": 55 },
+                { "id": "opt-8", "label": "2 horas", "price": 95 },
+                { "id": "opt-9", "label": "3 horas", "price": 135 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "diseno",
+          "items": [
+            { "id": "opt-10", "title": "Diseños visuales", "description": "Diseño de piezas gráficas pensadas para comunicar de forma clara, atractiva y profesional la propuesta de la marca en redes sociales, campañas o material digital.", "kind": "single", "price": 29 },
+            { "id": "opt-11", "title": "Carrusel", "description": "Diseño de carruseles estratégicos para comunicar información de forma ordenada, atractiva y dinámica, facilitando una mejor conexión con el público en redes sociales. Hasta 5 slides.", "kind": "single", "price": 39, "note": "Cada lámina adicional del carrusel tiene un valor unitario adicional de $7." }
+          ]
+        },
+        {
+          "id": "videos-comerciales",
+          "heading": "Videos comerciales",
+          "description": "Producción audiovisual completa orientada a promocionar una marca, producto o servicio mediante una pieza estratégica, creativa y pensada para generar impacto. Edición profesional incluida.",
+          "items": [
+            {
+              "id": "opt-videos",
+              "title": "Videos comerciales",
+              "kind": "options",
+              "options": [
+                { "id": "opt-12", "label": "25 - 45 seg", "price": 75 },
+                { "id": "opt-13", "label": "1 minuto", "price": 95 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "edicion",
+          "heading": "Edición y postproducción",
+          "description": "Proceso de montaje, ajuste visual y mejora del material grabado para convertirlo en una pieza atractiva, dinámica y profesional según la duración final del video.",
+          "items": [
+            {
+              "id": "opt-edicion",
+              "title": "Edición y postproducción",
+              "kind": "options",
+              "options": [
+                { "id": "opt-14", "label": "20 seg", "price": 30 },
+                { "id": "opt-15", "label": "30 seg", "price": 45 },
+                { "id": "opt-16", "label": "1 minuto", "price": 70 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "campanas",
+          "items": [
+            { "id": "opt-17", "title": "Gestión de campañas publicitarias (Meta y TikTok Business)", "description": "Configuración, segmentación y administración de campañas publicitarias en plataformas digitales para mejorar alcance, visibilidad y resultados según el objetivo planteado. Cada campaña.", "kind": "single", "price": 35 },
+            { "id": "opt-18", "title": "Análisis de datos y resultados", "description": "Evaluación del rendimiento de contenido, campañas o acciones de marketing mediante métricas e indicadores que permitan interpretar resultados y tomar mejores decisiones.", "kind": "single", "price": 55 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adicional",
+      "title": "Zentro adicional",
+      "description": "Servicios adicionales para marcas que necesitan soluciones específicas con enfoque estratégico y profesional.",
+      "groups": [
+        {
+          "id": "branding",
+          "items": [
+            { "id": "opt-19", "title": "Branding", "description": "Desarrollo de la identidad estratégica y visual de la marca para fortalecer su imagen, personalidad, comunicación y posicionamiento en el mercado.", "kind": "single", "price": 150 },
+            { "id": "opt-20", "title": "Manual de marca", "description": "Documento que reúne los lineamientos visuales y conceptuales de la marca, garantizando coherencia en su uso, comunicación y aplicación gráfica.", "kind": "single", "price": 120 }
+          ]
+        },
+        {
+          "id": "web",
+          "heading": "Página web",
+          "description": "Creación: desarrollo de una web desde cero. Rediseño: mejora visual y estructural de una web existente. Optimización: ajuste de rendimiento, contenido y navegación para mejores resultados.",
+          "items": [
+            {
+              "id": "opt-web",
+              "title": "Página web",
+              "kind": "options",
+              "options": [
+                { "id": "opt-21", "label": "Creación", "price": 399 },
+                { "id": "opt-22", "label": "Rediseño", "price": 298 },
+                { "id": "opt-23", "label": "Optimización", "price": 195 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dron",
+          "heading": "Tomas aéreas con Dron",
+          "description": "Registro audiovisual aéreo que aporta mayor impacto visual, amplitud y dinamismo al contenido, ideal para marcas, espacios, eventos o promociones. Sin incluir edición.",
+          "items": [
+            {
+              "id": "opt-dron",
+              "title": "Tomas aéreas con Dron",
+              "kind": "options",
+              "options": [
+                { "id": "opt-24", "label": "15 min", "price": 35 },
+                { "id": "opt-25", "label": "30 min", "price": 60 },
+                { "id": "opt-26", "label": "45 min", "price": 75 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "eventos",
+          "heading": "Cobertura de eventos y activaciones",
+          "description": "Cobertura profesional de eventos, lanzamientos o activaciones de marca para documentar la experiencia y generar contenido útil para difusión y posicionamiento. Incluye 1 diseño visual y 1 edición de video (45 seg).",
+          "items": [
+            {
+              "id": "opt-eventos",
+              "title": "Cobertura de eventos y activaciones",
+              "kind": "options",
+              "options": [
+                { "id": "opt-27", "label": "2 horas", "price": 120 },
+                { "id": "opt-28", "label": "4 horas", "price": 195 },
+                { "id": "opt-29", "label": "6 horas", "price": 255 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "diseno-grafico",
+          "items": [
+            { "id": "opt-30", "title": "Diseño Gráfico", "description": "Desarrollo de diseños personalizados para necesidades específicas de la marca, tanto digitales como impresas (el valor puede variar según la complejidad y requerimientos del proyecto).", "kind": "single", "price": 95 }
+          ]
+        }
+      ]
+    }
+  ]
+}

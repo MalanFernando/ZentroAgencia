@@ -1,0 +1,39 @@
+{
+  "nav": [
+    { "label": "Nosotros", "href": "/" },
+    { "label": "Planes", "href": "/planes" },
+    { "label": "Servicios", "href": "/servicios" },
+    { "label": "Contactos", "href": "/contactos" }
+  ],
+  "footer": {
+    "cta": "Dale centro a tu marca",
+    "links": [
+      { "label": "Nosotros", "href": "/" },
+      { "label": "Planes", "href": "/planes" },
+      { "label": "Servicios", "href": "/servicios" },
+      { "label": "Contactos", "href": "/contactos" }
+    ],
+    "ringLabel": "Trabajemos juntos",
+    "copyright": "Copyright © Zentro {year}",
+    "bottomLinks": [
+      { "label": "Términos", "href": "/terminos" },
+      { "label": "Instagram", "href": "https://www.instagram.com/zentro.ec_/" },
+      {
+        "label": "Facebook",
+        "href": "https://www.facebook.com/profile.php?id=61584867872902#"
+      },
+      { "label": "TikTok", "href": "https://www.tiktok.com/@zentro.ec_?_r=1" }
+    ]
+  },
+  "servicesTicker": [
+    "Producción audiovisual",
+    "Fotografía profesional",
+    "Diseño visual",
+    "Desarrollo web",
+    "Branding",
+    "Campañas publicitarias",
+    "Métricas",
+    "Contenido"
+  ]
+}
+

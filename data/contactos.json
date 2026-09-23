@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "title": "Hablemos",
+    "subtitle": "Cuéntanos qué necesitas."
+  },
+  "form": {
+    "interestLabel": "Estoy interesado en...",
+    "interestOptions": [
+      { "id": "asesoria", "label": "Asesoría" },
+      { "id": "estrategia", "label": "Estrategia" },
+      { "id": "no-seguro", "label": "No estoy seguro" },
+      { "id": "otro", "label": "Otro" }
+    ],
+    "submitLabel": "Enviar"
+  }
+}

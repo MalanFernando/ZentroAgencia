@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "titleLine1": "No solo publicamos",
+    "titleLine2": "contenido",
+    "titleLine3": "Construimos",
+    "titleLine4": "estrategia.",
+    "paragraph": "Estrategias de marketing avanzado, branding y producción audiovisual para impulsar el crecimiento de tu negocio.",
+    "ctaLabel": "Agenda una asesoría",
+    "ctaHref": "/contactos",
+    "imageA": { "src": "/images/home/hero-a.jpg", "alt": "Producción audiovisual de Zentro en set de grabación", "width": 415, "height": 266 },
+    "imageB": { "src": "/images/home/hero-b.jpg", "alt": "Sesión de fotografía profesional de marca", "width": 760, "height": 253 }
+  },
+  "about": {
+    "eyebrowImageA": { "src": "/images/home/about-a.jpg", "alt": "Equipo de Zentro trabajando en estrategia de marca", "width": 236, "height": 270 },
+    "eyebrowImageB": { "src": "/images/home/about-b.jpg", "alt": "Producción de contenido para redes sociales", "width": 236, "height": 262 },
+    "title": "Sobre nosotros",
+    "body": "Zentro es una agencia de marketing enfocada en analizar, planificar e implementar estrategias que impulsen el crecimiento de cada marca o empresa. Nuestro trabajo no se limita a crear contenido, sino a comprender el negocio, desarrollar estrategias de marketing avanzado y branding, y transformar esas ideas en acciones que conecten con el público, fortalezcan la identidad de la marca y generen resultados reales en su posicionamiento.",
+    "posterImage": { "src": "/images/home/about-poster.jpg", "alt": "Portada de campaña de branding Zentro", "width": 485, "height": 610 },
+    "ringWords": ["COMPROMISO", "CREATIVIDAD", "ESTRATEGIA"],
+    "sideParagraph": "Trabajamos con creatividad,\nestrategia, compromiso y\nvisión. Sabemos que el\nmarketing va más allá de\npublicar contenido; consiste\nen analizar, planificar y\nejecutar acciones que\ngeneren resultados medibles.",
+    "mission": {
+      "title": "Misión",
+      "body": "Impulsar el crecimiento de marcas\nmediante estrategias reales,\ncreatividad y producción de\ncontenido con enfoque profesional."
+    },
+    "vision": {
+      "title": "Visión",
+      "body": "Posicionarnos como el referente\nestratégico para marcas que buscan\ncrecer con identidad, innovación y\ndirección clara."
+    },
+    "quote": "No improvisamos,\nconstruimos dirección."
+  },
+  "methodology": {
+    "kicker": "METODOLOGÍA",
+    "highlight": "A.I.D.A.",
+    "body": "Aplicamos AIDA para que cada contenido no solo se vea profesional, sino que atraiga, conecte y venda. Guiamos a tu cliente desde la Atención hasta la Acción real.",
+    "ctaLabel": "Ver planes de servicio",
+    "ctaHref": "/planes",
+    "tiles": [
+      { "id": "aida-1", "src": "/images/home/aida-1.jpg", "alt": "Contenido producido para Lazamcare", "href": "https://www.instagram.com/lazam.care/" },
+      { "id": "aida-2", "src": "/images/home/aida-2.jpg", "alt": "Contenido producido para Inox Los Francis", "href": "https://www.instagram.com/inox_losfrancis/" },
+      { "id": "aida-3", "src": "/images/home/aida-3.jpg", "alt": "Contenido producido para Altoque by Jimmy", "href": "https://www.instagram.com/altoquebyjimmy/" },
+      { "id": "aida-4", "src": "/images/home/aida-4.jpg", "alt": "Contenido producido para Euphoria Wellness Spa", "href": "https://www.instagram.com/euphoria.wellnessspa/" },
+      { "id": "aida-5", "src": "/images/home/aida-5.jpg", "alt": "Contenido producido para Trackpro Ecuador", "href": "https://www.instagram.com/trackproec/" },
+      { "id": "aida-6", "src": "/images/home/aida-6.png", "alt": "Contenido producido para Priscila Lozada Beauty", "href": "https://www.instagram.com/priscilalozadabeauty/" },
+      { "id": "aida-7", "src": "/images/home/aida-7.png", "alt": "Contenido producido para Arviseg Ecuador", "href": "https://www.instagram.com/arvisegecuador/" },
+      { "id": "aida-8", "src": "/images/home/aida-8.jpg", "alt": "Contenido producido para Horizon Arcadia", "href": "https://www.instagram.com/horizonarcadia/" },
+      { "id": "aida-9", "src": "/images/home/aida-9.jpg", "alt": "Contenido producido para Valle Gourmet", "href": "https://www.instagram.com/valle__gourmett/" },
+      { "id": "aida-10", "src": "/images/home/aida-10.jpg", "alt": "Contenido producido para Fundación Visual Calderón - Marianas", "href": "https://www.instagram.com/fundacion_visual_marianas/" },
+      { "id": "aida-11", "src": "/images/home/aida-11.jpg", "alt": "Contenido producido para Textigal", "href": "https://www.instagram.com/textigal/" },
+      { "id": "aida-12", "src": "/images/home/aida-12.jpg", "alt": "Contenido producido para Mobile Solutions Pro", "href": "https://www.instagram.com/mobilesolutions.pro/" },
+      { "id": "aida-13", "src": "/images/home/aida-13.jpg", "alt": "Contenido producido para Rosalinda Bloom", "href": "https://www.instagram.com/rosalindabloomllc/" }
+    ]
+  },
+  "digitalPresence": {
+    "title": "Potencia tu presencia digital",
+    "paragraphLeft": "Desarrollamos estrategias\npersonalizadas con un acompañamiento\ncercano y enfoque profesional en cada\netapa del proceso.",
+    "paragraphRight": "Transformamos tu presencia digital en\nuna herramienta real de\nposicionamiento, conexión y\ncrecimiento.",
+    "photo": { "src": "/videos/digital-presence.mp4", "alt": "Marca posicionada digitalmente gracias a Zentro", "width": 510, "height": 403 }
+  },
+  "clients": {
+    "title": "Nuestros clientes",
+    "subtitle": "Confianza construida\ncon resultados.",
+    "logos": [
+      { "id": "client-1", "src": "/images/clients/altoque.png", "alt": "Logo Altoque by Jimmy" },
+      { "id": "client-2", "src": "/images/clients/arcadia.png", "alt": "Logo Horizon Arcadia" },
+      { "id": "client-3", "src": "/images/clients/arviseg.png", "alt": "Logo Arviseg" },
+      { "id": "client-4", "src": "/images/clients/auto.png", "alt": "Logo Auto" },
+      { "id": "client-5", "src": "/images/clients/cedros.png", "alt": "Logo Cedros" },
+      { "id": "client-6", "src": "/images/clients/euphoria.png", "alt": "Logo Euphoria Wellness Spa" },
+      { "id": "client-7", "src": "/images/clients/fundacionvisual.png", "alt": "Logo Fundación Visual Calderón - Marianas" },
+      { "id": "client-8", "src": "/images/clients/inox.png", "alt": "Logo Inox Los Francis" },
+      { "id": "client-9", "src": "/images/clients/lazamcare.png", "alt": "Logo Lazamcare" },
+      { "id": "client-10", "src": "/images/clients/mobile.png", "alt": "Logo Mobile Solutions Pro" },
+      { "id": "client-11", "src": "/images/clients/pricilalozada.png", "alt": "Logo Priscila Lozada Beauty" },
+      { "id": "client-12", "src": "/images/clients/rosalinda.png", "alt": "Logo Rosalinda Bloom" },
+      { "id": "client-13", "src": "/images/clients/textigal.png", "alt": "Logo Textigal" },
+      { "id": "client-14", "src": "/images/clients/trackpro.png", "alt": "Logo Trackpro Ecuador" },
+      { "id": "client-15", "src": "/images/clients/trecuador.png", "alt": "Logo TR Ecuador" },
+      { "id": "client-16", "src": "/images/clients/v-gourmet.png", "alt": "Logo Valle Gourmet" }
+    ]
+  }
+}

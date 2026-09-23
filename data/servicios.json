@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "title": "Servicios",
+    "paragraph": "Soluciones de marketing diseñadas para impulsar la imagen y la presencia digital de cada marca. Estrategia, producción y ejecución en un solo lugar.",
+    "ctaLabel": "Agendar asesoría",
+    "ctaHref": "/contactos",
+    "floatingImages": [
+      { "src": "/images/servicios/float-1.jpg", "alt": "Fotografía de producto", "width": 237, "height": 149 },
+      { "src": "/images/servicios/float-2.jpg", "alt": "Detalle de sesión de fotos", "width": 103, "height": 104 },
+      { "src": "/images/servicios/float-3.jpg", "alt": "Grabación en set", "width": 216, "height": 136 },
+      { "src": "/images/servicios/float-4.jpg", "alt": "Producción de contenido", "width": 139, "height": 124 },
+      { "src": "/images/servicios/float-5.jpg", "alt": "Diseño de campaña", "width": 127, "height": 159 }
+    ]
+  },
+  "videoShowcase": [
+    { "id": "video-1", "src": "/videos/servicios/video-1.mp4", "alt": "Video producido por Zentro para redes sociales" },
+    { "id": "video-2", "src": "/videos/servicios/video-2.mp4", "alt": "Video producido por Zentro para redes sociales" },
+    { "id": "video-3", "src": "/videos/servicios/video-3.mp4", "alt": "Video producido por Zentro para redes sociales" },
+    { "id": "video-4", "src": "/videos/servicios/video-4.mp4", "alt": "Video producido por Zentro para redes sociales" },
+    { "id": "video-5", "src": "/videos/servicios/video-5.mp4", "alt": "Video producido por Zentro para redes sociales" }
+  ],
+  "clientsSection": {
+    "title": "Nuestros\nclientes",
+    "featured": [
+      {
+        "id": "textigal",
+        "name": "Textigal",
+        "description": "Producción de contenido audiovisual y gestión de redes sociales para Textigal S.A.S., importadora y comercializadora de tela deportiva de alto rendimiento.",
+        "cover": { "src": "/images/servicios/client-1-cover.jpg", "alt": "Contenido producido para Textigal", "width": 640, "height": 640 },
+        "logo": { "src": "/images/clients/textigal.png", "alt": "Logo Textigal", "width": 1280, "height": 904 },
+        "socials": [
+          { "type": "web", "href": "https://www.textigal.com/" },
+          { "type": "facebook", "href": "https://www.facebook.com/textigal/" },
+          { "type": "instagram", "href": "https://www.instagram.com/textigal/" }
+        ]
+      },
+      {
+        "id": "priscila-lozada",
+        "name": "Priscila Lozada",
+        "description": "Manejo de redes sociales y producción de contenido para Priscila Lozada Beauty Store, tienda de belleza en Quito.",
+        "cover": { "src": "/images/servicios/client-2-cover.jpg", "alt": "Contenido producido para Priscila Lozada Beauty Store", "width": 640, "height": 640 },
+        "logo": { "src": "/images/clients/pricilalozada.png", "alt": "Logo Priscila Lozada Beauty Store", "width": 1351, "height": 1151 },
+        "socials": [
+          { "type": "facebook", "href": "https://www.facebook.com/priscilalozadabeauty/" },
+          { "type": "instagram", "href": "https://www.instagram.com/priscilalozadabeauty/" }
+        ]
+      },
+      {
+        "id": "visual-marianas",
+        "name": "Visual Marianas",
+        "description": "Producción audiovisual y gestión de presencia digital para la Fundación Visual Calderón - Marianas.",
+        "cover": { "src": "/images/servicios/client-3-cover.jpg", "alt": "Contenido producido para Fundación Visual Calderón - Marianas", "width": 640, "height": 640 },
+        "logo": { "src": "/images/clients/fundacionvisual.png", "alt": "Logo Fundación Visual Calderón - Marianas", "width": 1890, "height": 1890 },
+        "socials": [
+          { "type": "instagram", "href": "https://www.instagram.com/fundacion_visual_marianas/" },
+          { "type": "facebook", "href": "https://www.facebook.com/profile.php?id=61591817730568" }
+        ]
+      },
+      {
+        "id": "arviseg",
+        "name": "Arviseg",
+        "description": "Estrategia de contenido y redes sociales para Arviseg, empresa de seguridad integral enfocada en la protección de instalaciones, bienes y personas.",
+        "cover": { "src": "/images/servicios/client-4-cover.jpg", "alt": "Contenido producido para Arviseg Ecuador", "width": 640, "height": 640 },
+        "logo": { "src": "/images/clients/arviseg.png", "alt": "Logo Arviseg Ecuador", "width": 1620, "height": 1620 },
+        "socials": [
+          { "type": "instagram", "href": "https://www.instagram.com/arvisegecuador/" },
+          { "type": "web", "href": "https://www.arvisegecuador.com/" }
+        ]
+      },
+      {
+        "id": "horizon-arcadia",
+        "name": "Horizon Arcadia",
+        "description": "Producción de contenido y gestión de redes sociales para la marca Horizon Arcadia.",
+        "cover": { "src": "/images/servicios/client-5-cover.jpg", "alt": "Contenido producido para Horizon Arcadia", "width": 640, "height": 640 },
+        "logo": { "src": "/images/clients/arcadia.png", "alt": "Logo Horizon Arcadia", "width": 1080, "height": 716 },
+        "socials": [
+          { "type": "facebook", "href": "https://www.facebook.com/profile.php?id=61573329015164" },
+          { "type": "instagram", "href": "https://www.instagram.com/horizonarcadia/" }
+        ]
+      }
+    ]
+  },
+  "testimonialsSection": {
+    "title": "Lo que dicen nuestros clientes\nsobre nosotros",
+    "logos": [
+      { "id": "logo-1", "src": "/images/clients/lazamcare.png", "alt": "Logo Lazamcare" },
+      { "id": "logo-2", "src": "/images/clients/mobile.png", "alt": "Logo Mobile" },
+      { "id": "logo-3", "src": "/images/clients/pricilalozada.png", "alt": "Logo Priscila Lozada Beauty Store" },
+      { "id": "logo-4", "src": "/images/clients/rosalinda.png", "alt": "Logo Rosalinda" },
+      { "id": "logo-5", "src": "/images/clients/textigal.png", "alt": "Logo Textigal" },
+      { "id": "logo-6", "src": "/images/clients/trackpro.png", "alt": "Logo Trackpro" }
+    ],
+    "igCards": [
+      { "id": "ig-1", "src": "/images/testimonials/testimonial-1.jpg", "alt": "Testimonio de cliente por WhatsApp", "width": 594, "height": 257 },
+      { "id": "ig-2", "src": "/images/testimonials/testimonial-2.jpg", "alt": "Testimonio de cliente por WhatsApp", "width": 592, "height": 297 }
+    ],
+    "quotes": [
+      { "id": "quote-1", "quote": "La verdad que necesitábamos darle un poco más de movimiento a las redes y con el contenido que hicieron ya se ve diferente. También me gustó que siempre estuvieron pendientes de lo que necesitábamos.", "logo": { "src": "/images/clients/v-gourmet.png", "alt": "Logo Valle Gourmet" } },
+      { "id": "quote-2", "quote": "Nos gustó bastante como quedaron las publicaciones, ahora se entiende mejor lo que teníamos pensado, gracias por las ideas.", "logo": { "src": "/images/clients/mobile.png", "alt": "Logo Mobile Solutions Pro" } },
+      { "id": "quote-3", "quote": "Al principio no estaba segura de si hacer o no publicidad para redes, pero si nos ha funcionado. Hemos recibido más mensajes preguntando por los productos. Gracias por la paciencia y la ayuda.", "logo": { "src": "/images/clients/euphoria.png", "alt": "Logo Euphoria Wellness Spa" } }
+    ]
+  }
+}
