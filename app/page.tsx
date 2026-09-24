@@ -4,6 +4,7 @@ import { About } from "@/components/home/About";
 import { Methodology } from "@/components/home/Methodology";
 import { DigitalPresence } from "@/components/home/DigitalPresence";
 import { Clients } from "@/components/home/Clients";
+import { Hiring } from "@/components/home/Hiring";
 
 // Sin title: el inicio usa el título por defecto del layout (la plantilla
 // "%s | Zentro" solo se aplica a las rutas hijas).
@@ -20,6 +21,7 @@ export default function HomePage() {
       <About />
       <Methodology />
       <DigitalPresence />
+      <Hiring />
       <Clients />
     </main>
   );

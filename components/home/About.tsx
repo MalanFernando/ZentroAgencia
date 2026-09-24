@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Image from 'next/image';
 import homeData from '@/data/home.json';
 import { flattenMultiline, Multiline } from '@/components/shared/Multiline';
@@ -6,8 +7,9 @@ import { Shape } from '@/components/shared/Shape';
 import { Words } from '@/components/shared/motion/Words';
 import { ImageCycle } from '@/components/shared/motion/ImageCycle';
 import serviciosData from '@/data/servicios';
+import { InfoDialog } from '@/components/shared/InfoDialog';
 
-const { about } = homeData;
+const { about, aboutWhy } = homeData;
 const floats = serviciosData.hero.floatingImages;
 
 // La portada se turna con dos fotos del Hero de Servicios.
@@ -47,6 +49,34 @@ export function About() {
           <p data-reveal className="mx-auto mt-6 px-4 max-w-3xl text-center text-base leading-relaxed text-grey">
             {flattenMultiline(about.body)}
           </p>
+          <div data-reveal className="mt-4 text-center">
+            <InfoDialog label={aboutWhy.ctaLabel} title={aboutWhy.title}>
+              <div className="why-parts">
+                {aboutWhy.parts.map((part, i) => (
+                  <Fragment key={part.word}>
+                    {i > 0 ? (
+                      <span className="info-item why-plus" aria-hidden="true" style={{ '--i': i } as React.CSSProperties}>
+                        +
+                      </span>
+                    ) : null}
+                    <div className="info-item why-part" style={{ '--i': i } as React.CSSProperties}>
+                      <span className="why-word">{part.word}</span>
+                      <span className="why-meaning">{part.meaning}</span>
+                    </div>
+                  </Fragment>
+                ))}
+              </div>
+              {aboutWhy.paragraphs.map((text, i) => (
+                <p
+                  key={i}
+                  className="info-item info-dialog-text"
+                  style={{ '--i': aboutWhy.parts.length + i } as React.CSSProperties}
+                >
+                  {text}
+                </p>
+              ))}
+            </InfoDialog>
+          </div>
         </div>
 
         <div className="relative mx-auto mt-40 grid max-w-[60.5rem] grid-cols-1 gap-4 2md:grid-cols-[minmax(0,1.6fr)_minmax(0,1.2fr)_minmax(0,1.2fr)] 2md:gap-x-8 2md:gap-y-6">

@@ -10,8 +10,8 @@
       "familyTagline": "Para negocios y empresas que buscan una comunicación más sólida, constante y orientada a resultados.",
       "cardDescription": "Para negocios que buscan una comunicación sólida y constante.",
       "tiers": [
-        { "id": "impulso-1", "label": "Plan Impulso I", "price": 150 },
-        { "id": "impulso-2", "label": "Plan Impulso II", "price": 220 },
+        { "id": "impulso-1", "label": "Plan Impulso I", "price": 155 },
+        { "id": "impulso-2", "label": "Plan Impulso II", "price": 225 },
         { "id": "impulso-3", "label": "Plan Impulso III", "price": 295 }
       ],
       "rows": [
@@ -29,9 +29,9 @@
         {
           "label": "Producción audiovisual",
           "values": [
-            "Cámaras Canon, lentes, audio e iluminación profesional.",
-            "Producción Canon + accesorios + dron.",
-            "Producción Canon completa + dron estratégico."
+            "Producción completa + dron estratégico.",
+            "Producción completa + dron estratégico.",
+            "Producción completa + dron estratégico."
           ]
         },
         { "label": "Diseños visuales", "values": ["4 diseños.", "5 diseños.", "6 diseños."] },
@@ -65,9 +65,9 @@
         {
           "label": "Producción audiovisual",
           "values": [
-            "Producción profesional completa.",
-            "Producción completa + dirección visual.",
-            "Producción completa + dirección creativa."
+            "Producción completa + dron estratégico.",
+            "Producción completa + dron estratégico.",
+            "Producción completa + dron estratégico."
           ]
         },
         { "label": "Diseños visuales", "values": ["8 diseños.", "9 diseños.", "10 diseños."] },
@@ -101,9 +101,9 @@
         {
           "label": "Producción audiovisual",
           "values": [
-            "Producción Canon completa + dron estratégico.",
-            "Producción Canon completa + dron estratégico.",
-            "Producción Canon completa + dron estratégico."
+            "Producción completa + dron estratégico.",
+            "Producción completa + dron estratégico.",
+            "Producción completa + dron estratégico."
           ]
         },
         { "label": "Diseños visuales", "values": ["6 diseños.", "7 diseños.", "8 diseños."] },
@@ -117,22 +117,22 @@
     "impulso": {
       "familyName": "Zentro Impulso",
       "paragraphs": [
-        "Los planes Impulso incluyen manejo integral de redes sociales durante el mes según el alcance contratado. La inversión publicitaria no está incluida. Grabaciones adicionales, locaciones extra, jornadas extendidas, plataformas adicionales, campañas extra o cambios fuera de la planificación mensual se cotizan por separado. Los valores no incluyen IVA."
+        "Los planes Impulso incluyen estrategia mensual, producción de contenido, publicaciones y gestión publicitaria aplicada a las publicaciones contempladas en el plan. Todo el contenido audiovisual del mes se produce en una única jornada de grabación y una sola locación, de acuerdo con la planificación previamente establecida. Los diseños e historias incluidos corresponden a piezas estáticas y no animadas.",
+        "La inversión en pauta publicitaria no está incluida en el valor del plan; Zentro recomendará un presupuesto según los objetivos de la marca y gestionará dicha inversión en las plataformas. La respuesta y seguimiento de mensajes o comentarios se cotiza adicionalmente según volumen. Jornadas adicionales, nuevas locaciones, piezas animadas o cualquier servicio fuera del alcance contratado se cotizan por separado. Los valores no incluyen IVA."
       ]
     },
     "esencia": {
       "familyName": "Zentro Esencia",
       "paragraphs": [
-        "Los planes Zentro Esencia incluyen manejo integral de redes sociales durante el mes, según el alcance contratado. Incluyen análisis, estrategia mensual, producción audiovisual, edición, diseño de piezas visuales, publicaciones, gestión de 2 campañas publicitarias y revisión de resultados.",
-        "La inversión publicitaria no está incluida en el valor mensual del servicio. Grabaciones adicionales, jornadas extendidas, locaciones extra, plataformas adicionales, campañas extra, cambios fuera de la planificación mensual o servicios no contemplados en el plan serán cotizados por separado. El contenido no utilizado dentro del mes no es acumulable. Los valores no incluyen IVA."
+        "Los planes Esencia incluyen estrategia mensual, producción audiovisual, publicaciones, gestión y optimización publicitaria y análisis de resultados. La generación del contenido mensual se realiza en una única jornada de producción y una sola locación, organizando previamente todas las tomas necesarias para aprovechar eficientemente la sesión. Los diseños e historias contemplados son piezas estáticas y no incluyen animación.",
+        "La inversión destinada a pauta no forma parte del valor mensual; Zentro recomendará un presupuesto publicitario adecuado y se encargará de gestionarlo conforme a la estrategia y las publicaciones del plan. La atención de mensajes y comentarios se cotiza independientemente según su volumen. Grabaciones adicionales, cambios de locación, requerimientos especiales o servicios no contemplados serán cotizados por separado. Los valores no incluyen IVA."
       ]
     },
     "zentro": {
       "familyName": "Zentro",
       "paragraphs": [
-        "Los planes Zentro incluyen manejo integral de redes sociales durante el mes, según el alcance contratado. Incluyen análisis estratégico, creación de estrategia mensual, producción audiovisual profesional, edición, diseño de piezas visuales, publicaciones, gestión de campañas publicitarias ilimitadas y revisión de resultados.",
-        "La inversión publicitaria no está incluida en el valor mensual del servicio. Las campañas aplican a la gestión, configuración, seguimiento y optimización dentro del mes, pero no incluyen creación ilimitada de videos, piezas visuales, copys o materiales adicionales fuera del plan.",
-        "Grabaciones adicionales, jornadas extendidas, locaciones extra, plataformas adicionales, cambios fuera de la planificación mensual o servicios no contemplados serán cotizados por separado. El contenido no utilizado dentro del mes no es acumulable. Los valores no incluyen IVA."
+        "Los planes Zentro incluyen estrategia avanzada, producción audiovisual profesional, publicaciones, seguimiento y optimización publicitaria y análisis estratégico de resultados. Por el volumen de contenido, la producción podrá distribuirse hasta en dos jornadas de grabación y un máximo de dos locaciones, siempre que estas se encuentren dentro de una distancia razonable entre sí y formen parte de la planificación mensual. Los diseños e historias incluidos corresponden a piezas estáticas y no animadas.",
+        "La inversión en pauta publicitaria no está incluida; Zentro recomendará el presupuesto de inversión y gestionará su distribución y optimización en las plataformas según los objetivos y desempeño de las publicaciones. La gestión de mensajes, comentarios y seguimiento comercial se cotiza aparte según volumen. Jornadas o locaciones adicionales, traslados extraordinarios, piezas animadas y cualquier servicio fuera del plan serán cotizados de manera independiente. Los valores no incluyen IVA."
       ]
     }
   },
@@ -159,7 +159,7 @@
               "id": "opt-foto",
               "title": "Fotografía profesional",
               "kind": "options",
-              "note": "La edición por cada fotografía tiene un valor unitario adicional de $9.",
+              "note": "La edición por cada fotografía tiene un valor unitario adicional de $7.",
               "options": [
                 { "id": "opt-4", "label": "x30 Fotografías", "price": 55 },
                 { "id": "opt-5", "label": "x60 Fotografías", "price": 95 },
@@ -179,9 +179,9 @@
               "kind": "options",
               "note": "La edición se cotiza por separado en el bloque de Edición y postproducción.",
               "options": [
-                { "id": "opt-7", "label": "1 hora", "price": 55 },
-                { "id": "opt-8", "label": "2 horas", "price": 95 },
-                { "id": "opt-9", "label": "3 horas", "price": 135 }
+                { "id": "opt-7", "label": "2 horas", "price": 55 },
+                { "id": "opt-8", "label": "3 horas", "price": 95 },
+                { "id": "opt-9", "label": "4 horas", "price": 135 }
               ]
             }
           ]
@@ -204,7 +204,7 @@
               "kind": "options",
               "options": [
                 { "id": "opt-12", "label": "25 - 45 seg", "price": 75 },
-                { "id": "opt-13", "label": "1 minuto", "price": 95 }
+                { "id": "opt-13", "label": "1 min 30 seg", "price": 95 }
               ]
             }
           ]
@@ -219,9 +219,9 @@
               "title": "Edición y postproducción",
               "kind": "options",
               "options": [
-                { "id": "opt-14", "label": "20 seg", "price": 30 },
-                { "id": "opt-15", "label": "30 seg", "price": 45 },
-                { "id": "opt-16", "label": "1 minuto", "price": 70 }
+                { "id": "opt-14", "label": "25 - 45 seg", "price": 30 },
+                { "id": "opt-15", "label": "1 min 30 seg", "price": 45 },
+                { "id": "opt-16", "label": "3 min", "price": 70 }
               ]
             }
           ]
@@ -229,7 +229,7 @@
         {
           "id": "campanas",
           "items": [
-            { "id": "opt-17", "title": "Gestión de campañas publicitarias (Meta y TikTok Business)", "description": "Configuración, segmentación y administración de campañas publicitarias en plataformas digitales para mejorar alcance, visibilidad y resultados según el objetivo planteado. Cada campaña.", "kind": "single", "price": 35 },
+            { "id": "opt-17", "title": "Gestión de campañas publicitarias (Meta y TikTok Business)", "description": "Configuración, segmentación y administración de campañas publicitarias en plataformas digitales para mejorar alcance, visibilidad y resultados según el objetivo planteado. Cada campaña.", "kind": "single", "price": 25 },
             { "id": "opt-18", "title": "Análisis de datos y resultados", "description": "Evaluación del rendimiento de contenido, campañas o acciones de marketing mediante métricas e indicadores que permitan interpretar resultados y tomar mejores decisiones.", "kind": "single", "price": 55 }
           ]
         }
@@ -243,7 +243,7 @@
         {
           "id": "branding",
           "items": [
-            { "id": "opt-19", "title": "Branding", "description": "Desarrollo de la identidad estratégica y visual de la marca para fortalecer su imagen, personalidad, comunicación y posicionamiento en el mercado.", "kind": "single", "price": 150 },
+            { "id": "opt-19", "title": "Branding", "description": "Desarrollo de la identidad estratégica y visual de la marca para fortalecer su imagen, personalidad, comunicación y posicionamiento en el mercado.", "kind": "single", "price": 125 },
             { "id": "opt-20", "title": "Manual de marca", "description": "Documento que reúne los lineamientos visuales y conceptuales de la marca, garantizando coherencia en su uso, comunicación y aplicación gráfica.", "kind": "single", "price": 120 }
           ]
         },
@@ -291,9 +291,9 @@
               "title": "Cobertura de eventos y activaciones",
               "kind": "options",
               "options": [
-                { "id": "opt-27", "label": "2 horas", "price": 120 },
-                { "id": "opt-28", "label": "4 horas", "price": 195 },
-                { "id": "opt-29", "label": "6 horas", "price": 255 }
+                { "id": "opt-27", "label": "2 horas", "price": 160 },
+                { "id": "opt-28", "label": "4 horas", "price": 255 },
+                { "id": "opt-29", "label": "6 horas", "price": 325 }
               ]
             }
           ]

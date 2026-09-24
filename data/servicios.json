@@ -99,5 +99,46 @@
       { "id": "quote-2", "quote": "Nos gustó bastante como quedaron las publicaciones, ahora se entiende mejor lo que teníamos pensado, gracias por las ideas.", "logo": { "src": "/images/clients/mobile.png", "alt": "Logo Mobile Solutions Pro" } },
       { "id": "quote-3", "quote": "Al principio no estaba segura de si hacer o no publicidad para redes, pero si nos ha funcionado. Hemos recibido más mensajes preguntando por los productos. Gracias por la paciencia y la ayuda.", "logo": { "src": "/images/clients/euphoria.png", "alt": "Logo Euphoria Wellness Spa" } }
     ]
+  },
+  "process": {
+    "title": "Cómo trabajamos",
+    "steps": [
+      {
+        "title": "Diagnóstico",
+        "items": [
+          "Análisis de marca",
+          "Análisis de competencia",
+          "Auditoría digital",
+          "Identificación de oportunidades"
+        ]
+      },
+      {
+        "title": "Estrategia",
+        "items": [
+          "Definición de objetivos",
+          "Definición del público objetivo",
+          "Planificación de contenido (estrategias, tomas, guiones, métricas)",
+          "Definición de tono y comunicación"
+        ]
+      },
+      {
+        "title": "Producción",
+        "items": [
+          "Creación de contenido (videos, fotos)",
+          "Copywriting estratégico",
+          "Edición profesional"
+        ]
+      },
+      {
+        "title": "Optimización",
+        "items": [
+          "Gestión de campañas",
+          "Evaluación de métricas y KPI's",
+          "Análisis de resultados",
+          "Ajustes estratégicos",
+          "Mejora continua"
+        ]
+      }
+    ]
   }
 }

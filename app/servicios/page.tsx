@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiciosHero } from "@/components/servicios/Hero";
+import { Process } from "@/components/servicios/Process";
 import { VideoShowcase } from "@/components/servicios/VideoShowcase";
 import { ClientsFeatured } from "@/components/servicios/ClientsFeatured";
 import { Testimonials } from "@/components/servicios/Testimonials";
@@ -16,6 +17,7 @@ export default function ServiciosPage() {
     <main className="flex flex-col">
       <ServiciosHero />
       <VideoShowcase />
+      <Process />
       <ClientsFeatured />
       <Testimonials />
     </main>

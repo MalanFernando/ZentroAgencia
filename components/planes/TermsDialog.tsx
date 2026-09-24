@@ -21,17 +21,19 @@ export function TermsDialog({ terms, onClose }: { terms: PlanTerms | null; onClo
       onClick={(e) => {
         if (e.target === ref.current) onClose();
       }}
-      className="fixed top-1/2 left-1/2 m-0 w-[min(720px,92vw)] max-h-[85vh] -translate-x-1/2 -translate-y-1/2 rounded-[4px] border border-line bg-bg p-0 text-white backdrop:bg-black/70"
+      className="fixed top-1/2 left-1/2 m-0 w-[min(720px,92vw)] max-h-[85vh] overflow-hidden -translate-x-1/2 -translate-y-1/2 rounded-[4px] border border-line bg-bg p-0 text-white backdrop:bg-black/70"
     >
       {terms ? (
-        <div className="relative max-h-[85vh] overflow-y-auto p-8">
+        <div className="dialog-scroll relative max-h-[calc(85vh-2px)] overflow-y-auto p-8">
           <button
             type="button"
             onClick={onClose}
             aria-label="Cerrar"
-            className="absolute top-3 right-3 flex h-9 w-9 cursor-pointer items-center justify-center rounded-[4px] border border-line text-base"
+            className="dialog-close"
           >
-            ×
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+            </svg>
           </button>
           <h2 className="pr-12 text-xl font-bold">Términos y condiciones — {terms.familyName}</h2>
           <div className="mt-6 flex flex-col gap-4">

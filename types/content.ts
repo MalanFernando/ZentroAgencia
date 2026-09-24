@@ -34,6 +34,10 @@ export type ServiciosContent = {
     igCards: { id: string; src: string; alt: string; width: number; height: number }[];
     quotes: Testimonial[];
   };
+  process: {
+    title: string;
+    steps: { title: string; items: string[] }[];
+  };
 };
 
 export type PlanSlug = "impulso" | "esencia" | "zentro";

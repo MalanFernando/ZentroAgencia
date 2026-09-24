@@ -7,7 +7,7 @@ const { clients } = homeData;
 
 export function Clients() {
   return (
-    <section className="py-12 md:py-20 mt-30">
+    <section className="py-12 md:py-20 mt-10">
       <div className="mx-auto max-w-7xl px-4 lg:px-7">
         <h2 data-reveal="words" className="text-4xl font-bold text-white md:text-3xl">
           <Words text={clients.title} />

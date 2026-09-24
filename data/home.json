@@ -77,5 +77,75 @@
       { "id": "client-15", "src": "/images/clients/trecuador.png", "alt": "Logo TR Ecuador" },
       { "id": "client-16", "src": "/images/clients/v-gourmet.png", "alt": "Logo Valle Gourmet" }
     ]
+  },
+  "hiring": {
+    "title": "Cómo contratar",
+    "subtitle": "Un proceso simple, transparente y estratégico para iniciar el manejo integral de tus redes sociales.",
+    "ctaLabel": "Agenda una asesoría",
+    "ctaHref": "/contactos",
+    "steps": [
+      {
+        "title": "Plan, asesoría y contrato",
+        "body": "Conocemos la información principal de tu negocio, revisamos tus necesidades y recomendamos el plan más adecuado. Luego formalizamos el acuerdo mediante la firma del contrato, garantizando transparencia, compromiso y claridad en las condiciones del servicio."
+      },
+      {
+        "title": "Pago total y estrategia",
+        "body": "Una vez confirmado el plan, se realiza el pago total del servicio para iniciar el proceso. Después analizamos tu negocio, redes sociales, comunicación actual y oportunidades para construir una estrategia orientada a conectar con tu público y atraer clientes potenciales."
+      },
+      {
+        "title": "Planificación y producción",
+        "body": "Te presentamos la planificación mensual del contenido antes de iniciar la grabación. Con la aprobación correspondiente, realizamos la producción y grabación con equipo profesional, cuidando la calidad visual y el enfoque estratégico de cada pieza."
+      },
+      {
+        "title": "Publicación y resultados",
+        "body": "Desarrollamos la edición y diseño con herramientas avanzadas, gestionamos la publicación del contenido durante el mes y damos seguimiento a las campañas. Al finalizar el periodo, realizamos la reunión de resultados para revisar métricas, rendimiento y próximos pasos."
+      }
+    ]
+  },
+  "aidaDetail": {
+    "ctaLabel": "Conocer más",
+    "title": "Metodología",
+    "highlight": "AIDA",
+    "intro": "Aplicamos AIDA para que cada contenido no solo se vea profesional, sino que atraiga, conecte y venda, guiando al cliente desde la atención hasta una acción real.",
+    "items": [
+      {
+        "letter": "A",
+        "word": "Atención",
+        "body": "Creamos ganchos visuales y mensajes iniciales que detienen al público y hacen que preste atención a la marca."
+      },
+      {
+        "letter": "I",
+        "word": "Interés",
+        "body": "Mostramos beneficios, diferenciales y problemas que el negocio puede resolver de forma clara y atractiva."
+      },
+      {
+        "letter": "D",
+        "word": "Deseo",
+        "body": "Construimos valor alrededor del producto o servicio, conectando con emociones, necesidades y razones de compra."
+      },
+      {
+        "letter": "A",
+        "word": "Acción",
+        "body": "Guiamos al cliente hacia el siguiente paso: escribir por WhatsApp, visitar el local, pedir información, reservar o comprar."
+      }
+    ]
+  },
+  "aboutWhy": {
+    "ctaLabel": "¿Por qué Zentro?",
+    "title": "Quiénes somos",
+    "parts": [
+      {
+        "word": "Zen",
+        "meaning": "Esencia y claridad"
+      },
+      {
+        "word": "Tro",
+        "meaning": "Centro y dirección"
+      }
+    ],
+    "paragraphs": [
+      "Zentro es una agencia de marketing creada para convertirse en el centro estratégico de las marcas. Nuestro enfoque parte de comprender profundamente cada negocio para transformar su identidad en acciones concretas de marketing, branding y comunicación.",
+      "Combinamos estrategia, creatividad y producción para desarrollar marcas con mayor presencia, mejor conexión con su público y una proyección más sólida dentro de su mercado. En Zentro no solo creamos contenido; construimos dirección para marcas que quieren avanzar con propósito."
+    ]
   }
 }

@@ -26,6 +26,11 @@ export function VideoModal({ src, onClose }: { src: string | null; onClose: () =
       onClick={onClose}
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
     >
+      <button type="button" onClick={onClose} aria-label="Cerrar video" className="dialog-close dialog-close-fixed">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+        </svg>
+      </button>
       <video
         key={src}
         src={src}
