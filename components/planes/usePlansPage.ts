@@ -22,7 +22,7 @@ function loadPersistedSelection(): Set<string> {
 }
 
 export function usePlansPage() {
-  const [selectedFamily, setSelectedFamily] = useState<PlanSlug>("impulso");
+  const [selectedFamily, setSelectedFamily] = useState<PlanSlug>("zentro");
   const [termsFamily, setTermsFamily] = useState<PlanSlug | null>(null);
   const [catalogTab, setCatalogTab] = useState<CatalogTab>("individual");
   const [activeTierIndex, setActiveTierIndex] = useState(0);

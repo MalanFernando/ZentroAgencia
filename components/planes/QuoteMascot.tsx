@@ -58,7 +58,7 @@ export function QuoteMascot({ state }: { state: PlansPageState }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Enviar selección de ${count} servicio(s) por WhatsApp`}
-        className="group relative flex items-center justify-center rounded-[4px]"
+        className="mascot-float group relative flex items-center justify-center rounded-full"
         style={{
           height:
             'clamp(2.75rem, 2.75rem + (100vw - 22.5rem) * 0.006024, 3rem)',
@@ -66,7 +66,7 @@ export function QuoteMascot({ state }: { state: PlansPageState }) {
         }}
       >
         <span
-          className="absolute inset-0 animate-pulse rounded-[4px] bg-red/15"
+          className="absolute inset-0 animate-pulse rounded-full bg-red/15"
           aria-hidden="true"
         />
         <span className="relative flex h-full w-full items-center justify-center rounded-[50%] bg-white shadow-lg shadow-black/30 transition-transform duration-200 group-hover:scale-102">

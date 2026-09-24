@@ -58,7 +58,7 @@ export function CatalogSection({ state }: { state: PlansPageState }) {
         {catalog.description}
       </p>
 
-      <div className="mt-12 flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-12">
+      <div className="relative mt-12 flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-12 lg:before:absolute lg:before:inset-y-0 lg:before:left-1/2 lg:before:w-px lg:before:bg-line lg:before:content-['']">
         {catalog.groups.map((group) => (
           <div key={group.id}>
             {group.heading ? (

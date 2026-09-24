@@ -41,42 +41,6 @@
       ]
     },
     {
-      "slug": "esencia",
-      "name": "Esencia",
-      "familyTagline": "Manejo integral de redes sociales durante todo el mes para negocios y empresas que buscan contenido constante, estrategia y mejor producción.",
-      "cardDescription": "Estrategia integral, contenido constante y mejor producción.",
-      "tiers": [
-        { "id": "esencia-1", "label": "Plan Esencia I", "price": 345 },
-        { "id": "esencia-2", "label": "Plan Esencia II", "price": 415 },
-        { "id": "esencia-3", "label": "Plan Esencia III", "price": 490 }
-      ],
-      "rows": [
-        {
-          "label": "Análisis y estrategia mensual",
-          "values": [
-            "Análisis del negocio y estrategia de contenido.",
-            "Análisis de competencia y estrategia mensual.",
-            "Estrategia integral de comunicación y crecimiento."
-          ]
-        },
-        { "label": "Publicaciones mensuales", "values": ["15 publicaciones.", "18 publicaciones.", "21 publicaciones."] },
-        { "label": "Plataformas", "values": ["Instagram, Facebook y TikTok.", "Instagram, Facebook y TikTok.", "Instagram, Facebook y TikTok."] },
-        { "label": "Videos comerciales", "values": ["4 videos de 25 a 45 seg.", "5 videos de 25 a 45 seg.", "6 videos de 25 a 45 seg."] },
-        {
-          "label": "Producción audiovisual",
-          "values": [
-            "Producción Canon completa + dron estratégico.",
-            "Producción Canon completa + dron estratégico.",
-            "Producción Canon completa + dron estratégico."
-          ]
-        },
-        { "label": "Diseños visuales", "values": ["6 diseños.", "7 diseños.", "8 diseños."] },
-        { "label": "Historias", "values": ["5 historias mensuales.", "6 historias mensuales.", "7 historias mensuales."] },
-        { "label": "Campañas publicitarias", "values": ["Campañas optimizadas.", "Campañas optimizadas.", "Campañas optimizadas."] },
-        { "label": "Reporte mensual", "values": ["Reporte mensual de resultados.", "Reporte con mejoras.", "Reporte estratégico + reunión."] }
-      ]
-    },
-    {
       "slug": "zentro",
       "name": "Zentro",
       "familyTagline": "Manejo integral de redes sociales durante todo el mes para empresas y negocios que necesitan estrategia, producción profesional y crecimiento medible.",
@@ -110,6 +74,42 @@
         { "label": "Historias", "values": ["8 historias mensuales.", "9 historias mensuales.", "10 historias mensuales."] },
         { "label": "Campañas publicitarias", "values": ["Campañas con seguimiento mensual.", "Campañas con seguimiento mensual.", "Campañas con seguimiento mensual."] },
         { "label": "Reporte mensual", "values": ["Reporte estratégico de resultados.", "Reporte + lectura de campañas.", "Reporte avanzado + proyección."] }
+      ]
+    },
+    {
+      "slug": "esencia",
+      "name": "Esencia",
+      "familyTagline": "Manejo integral de redes sociales durante todo el mes para negocios y empresas que buscan contenido constante, estrategia y mejor producción.",
+      "cardDescription": "Estrategia integral, contenido constante y mejor producción.",
+      "tiers": [
+        { "id": "esencia-1", "label": "Plan Esencia I", "price": 345 },
+        { "id": "esencia-2", "label": "Plan Esencia II", "price": 415 },
+        { "id": "esencia-3", "label": "Plan Esencia III", "price": 490 }
+      ],
+      "rows": [
+        {
+          "label": "Análisis y estrategia mensual",
+          "values": [
+            "Análisis del negocio y estrategia de contenido.",
+            "Análisis de competencia y estrategia mensual.",
+            "Estrategia integral de comunicación y crecimiento."
+          ]
+        },
+        { "label": "Publicaciones mensuales", "values": ["15 publicaciones.", "18 publicaciones.", "21 publicaciones."] },
+        { "label": "Plataformas", "values": ["Instagram, Facebook y TikTok.", "Instagram, Facebook y TikTok.", "Instagram, Facebook y TikTok."] },
+        { "label": "Videos comerciales", "values": ["4 videos de 25 a 45 seg.", "5 videos de 25 a 45 seg.", "6 videos de 25 a 45 seg."] },
+        {
+          "label": "Producción audiovisual",
+          "values": [
+            "Producción Canon completa + dron estratégico.",
+            "Producción Canon completa + dron estratégico.",
+            "Producción Canon completa + dron estratégico."
+          ]
+        },
+        { "label": "Diseños visuales", "values": ["6 diseños.", "7 diseños.", "8 diseños."] },
+        { "label": "Historias", "values": ["5 historias mensuales.", "6 historias mensuales.", "7 historias mensuales."] },
+        { "label": "Campañas publicitarias", "values": ["Campañas optimizadas.", "Campañas optimizadas.", "Campañas optimizadas."] },
+        { "label": "Reporte mensual", "values": ["Reporte mensual de resultados.", "Reporte con mejoras.", "Reporte estratégico + reunión."] }
       ]
     }
   ],

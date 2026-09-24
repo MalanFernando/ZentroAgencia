@@ -74,7 +74,7 @@ export function PricingTable({ state }: { state: PlansPageState }) {
           <tbody>
             {family.rows.map((row) => (
               <tr key={row.label} className="border-b border-line/30">
-                <td className="py-4 text-base font-bold text-white">
+                <td className="py-4 pr-2 text-base font-bold text-white">
                   {row.label}
                 </td>
                 {row.values.map((value, i) => (

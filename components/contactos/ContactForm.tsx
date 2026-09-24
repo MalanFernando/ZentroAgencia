@@ -76,7 +76,7 @@ export function ContactForm() {
 
   return (
     <form
-      className="relative flex w-full max-w-4xl flex-col gap-6 px-5 pb-16 pt-14 lg:px-10 lg:pb-24"
+      className="relative mx-auto flex w-full max-w-4xl flex-col gap-6 px-5 pb-16 pt-14 lg:px-10 lg:pb-24"
       onSubmit={f.handleSubmit}
     >
       <Honeypot />
