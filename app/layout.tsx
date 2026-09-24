@@ -75,15 +75,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       }`}
       suppressHydrationWarning
     >
-      <head>
+      <body className="min-h-full">
+        {/* Primer nodo del body (no un <head> propio): el hosting puede inyectar
+            nodos en <head> y eso rompería la hidratación de un <head> escrito a mano. */}
         <script
           dangerouslySetInnerHTML={{
             __html:
               "document.documentElement.dataset.motion=matchMedia('(prefers-reduced-motion: reduce)').matches?'off':'on'",
           }}
         />
-      </head>
-      <body className="min-h-full">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c") }}

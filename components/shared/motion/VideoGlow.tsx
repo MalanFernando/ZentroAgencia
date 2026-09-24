@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { motionEnabled } from "./motion";
 
 const W = 32;
 const H = 24;
@@ -18,7 +19,7 @@ export function VideoGlow({ className = "" }: { className?: string }) {
     const video = canvas?.parentElement?.querySelector("video");
     const ctx = canvas?.getContext("2d");
     if (!canvas || !video || !ctx) return;
-    if (document.documentElement.dataset.motion !== "on") return;
+    if (!motionEnabled()) return;
     const desktop = window.matchMedia("(min-width: 720px)");
 
     let raf = 0;

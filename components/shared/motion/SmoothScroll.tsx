@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { motionEnabled } from "./motion";
 
 let instance: Lenis | null = null;
 
@@ -19,7 +20,7 @@ export function scrollToElement(el: HTMLElement) {
  */
 export function SmoothScroll() {
   useEffect(() => {
-    if (document.documentElement.dataset.motion !== "on") return;
+    if (!motionEnabled()) return;
 
     const lenis = new Lenis({
       autoRaf: true,

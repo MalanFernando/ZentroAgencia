@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { motionEnabled } from "./motion";
 
 type CycleImage = { src: string; alt: string };
 
@@ -55,7 +56,7 @@ export function ImageCycle({
   useEffect(() => {
     const el = ref.current?.parentElement;
     if (!el || images.length < 2) return;
-    if (document.documentElement.dataset.motion !== "on") return;
+    if (!motionEnabled()) return;
 
     const mountExtras = () => setExtras(true);
     if (document.readyState === "complete") mountExtras();

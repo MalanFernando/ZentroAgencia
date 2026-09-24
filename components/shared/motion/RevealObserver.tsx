@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { motionEnabled } from "./motion";
 
 const STAGGER_MS = 70;
 const SETTLE_MS = 1300;
@@ -19,7 +20,7 @@ const DRAW_MARGIN = "0px 0px -10% 0px";
  */
 export function RevealObserver() {
   useEffect(() => {
-    if (document.documentElement.dataset.motion !== "on") return;
+    if (!motionEnabled()) return;
 
     const timers = new Set<number>();
     let frame = 0;

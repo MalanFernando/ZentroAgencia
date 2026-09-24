@@ -5,8 +5,9 @@ import { Methodology } from "@/components/home/Methodology";
 import { DigitalPresence } from "@/components/home/DigitalPresence";
 import { Clients } from "@/components/home/Clients";
 
+// Sin title: el inicio usa el título por defecto del layout (la plantilla
+// "%s | Zentro" solo se aplica a las rutas hijas).
 export const metadata: Metadata = {
-  title: "Nosotros",
   description:
     "Zentro es una agencia de marketing enfocada en analizar, planificar e implementar estrategias que impulsen el crecimiento de tu marca o empresa.",
   alternates: { canonical: "/" },
