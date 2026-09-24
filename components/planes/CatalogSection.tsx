@@ -29,7 +29,7 @@ export function CatalogSection({ state }: { state: PlansPageState }) {
       <div className="mx-auto mt-10 flex w-full max-w-md justify-center">
         <div
           role="tablist"
-          className="flex h-14 w-full max-w-sm items-center gap-1 rounded-full bg-surface p-1.5"
+          className="flex h-14 w-full max-w-sm items-center gap-1 rounded-full bg-card p-1.5"
         >
           {state.catalogs.map((c, i) => (
             <button
@@ -91,7 +91,7 @@ function CatalogItemRow({ item, state }: { item: CatalogItem; state: PlansPageSt
     return (
       <label
         className={`flex cursor-pointer items-start gap-4 px-3 py-5 transition-colors duration-200 ${
-          checked ? "bg-surface" : ""
+          checked ? "bg-card" : ""
         }`}
       >
         <input
@@ -134,7 +134,7 @@ function CatalogItemRow({ item, state }: { item: CatalogItem; state: PlansPageSt
             <label
               key={option.id}
               className={`flex cursor-pointer items-center gap-3 px-3 py-3 transition-colors ${
-                checked ? "bg-surface" : ""
+                checked ? "bg-card" : ""
               }`}
             >
               <input

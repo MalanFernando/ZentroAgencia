@@ -33,9 +33,9 @@ export function PricingTable({ state }: { state: PlansPageState }) {
               role="tab"
               aria-selected={active}
               onClick={() => setActiveTierIndex(i)}
-              className={`flex-1 rounded-[4px] border px-3 py-3 text-left text-sm transition-colors ${
+              className={`flex-1 rounded-[4px] border px-3 py-3 text-sm transition-colors ${
                 active
-                  ? "border-white bg-card text-white"
+                  ? "border-white text-white"
                   : "border-line/60 text-grey"
               }`}
             >
@@ -80,7 +80,7 @@ export function PricingTable({ state }: { state: PlansPageState }) {
                 {row.values.map((value, i) => (
                   <td
                     key={i}
-                    className={`py-4 px-2 text-base text-white ${
+                    className={`py-4 px-2 text-base text-grey ${
                       i !== activeTierIndex ? "hidden lg:table-cell" : ""
                     }`}
                   >
