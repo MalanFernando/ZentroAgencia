@@ -16,7 +16,7 @@ function QuoteCard({
   children?: React.ReactNode;
 }) {
   return (
-    <div className={`testimonials-item testimonials-quote ${className}`}>
+    <div data-reveal className={`testimonials-item testimonials-quote hover-lift ${className}`}>
       <div className="testimonials-card quote-card">
         <span className="quote-card-logo">
           <Image
@@ -40,11 +40,11 @@ export function Testimonials() {
 
   return (
     <section className="testimonials">
-      <h2 className="testimonials-title">
+      <h2 data-reveal className="testimonials-title">
         <Multiline text={testimonialsSection.title} />
       </h2>
 
-      <div className="testimonials-logos">
+      <div data-reveal="fade" className="testimonials-logos">
         {testimonialsSection.logos.map((logo) => (
           <div key={logo.id} className="testimonials-logo">
             <Image
@@ -61,7 +61,7 @@ export function Testimonials() {
       <div className="testimonials-collage">
         <div className="testimonials-row">
           {ig1 && (
-            <div className="testimonials-item testimonials-ig testimonials-ig-1">
+            <div data-reveal="image" className="testimonials-item testimonials-ig testimonials-ig-1 hover-lift">
               <div
                 className="testimonials-card testimonials-ig-media"
                 style={{ aspectRatio: `${ig1.width} / ${ig1.height}` }}
@@ -92,7 +92,7 @@ export function Testimonials() {
           )}
 
           {ig2 && (
-            <div className="testimonials-item testimonials-ig testimonials-ig-2">
+            <div data-reveal="image" className="testimonials-item testimonials-ig testimonials-ig-2 hover-lift">
               <div
                 className="testimonials-card testimonials-ig-media"
                 style={{ aspectRatio: `${ig2.width} / ${ig2.height}` }}

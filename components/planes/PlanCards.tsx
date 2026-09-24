@@ -3,9 +3,11 @@
 import type { PlanFamily } from "@/types/content";
 import type { PlansPageState } from "./usePlansPage";
 import { Shape } from "@/components/shared/Shape";
+import { scrollToElement } from "@/components/shared/motion/SmoothScroll";
 
 function scrollToPricingTable(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const el = document.getElementById(id);
+  if (el) scrollToElement(el);
 }
 
 export function PlanCards({ state }: { state: PlansPageState }) {
@@ -24,6 +26,7 @@ function PlanCard({ family, state }: { family: PlanFamily; state: PlansPageState
   const isSelected = state.selectedFamily === family.slug;
   return (
     <article
+      data-reveal
       className={`relative rounded-[4px] p-6 transition-colors ${
         isSelected ? "bg-card" : "bg-transparent"
       }`}

@@ -3,6 +3,7 @@
 import { useId } from 'react';
 import { useContactForm } from './useContactForm';
 import { Shape } from '@/components/shared/Shape';
+import { RollText } from '@/components/shared/motion/RollText';
 
 const Honeypot = () => (
   <input
@@ -53,7 +54,7 @@ function Field({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col gap-4">
+    <div data-reveal className="flex flex-col gap-4">
       <label htmlFor={id} className={labelClass}>
         {label}
       </label>
@@ -128,7 +129,7 @@ export function ContactForm() {
         />
       </Field>
 
-      <div className="flex flex-col gap-[clamp(0.75rem,1.5vw,1.5rem)]">
+      <div data-reveal className="flex flex-col gap-[clamp(0.75rem,1.5vw,1.5rem)]">
         <p className={labelClass}>{f.interestLabel}</p>
         <div className="flex flex-wrap gap-[clamp(0.75rem,1.5vw,1.5rem)]">
           {f.interestOptions.map((option) => {
@@ -161,13 +162,13 @@ export function ContactForm() {
         />
       </Field>
 
-      <div className="flex flex-col items-end gap-2">
+      <div data-reveal className="flex flex-col items-end gap-2">
         <button
           type="submit"
           disabled={f.status === 'submitting'}
           className="inline-flex items-center gap-[0.4em] rounded-[4px] bg-transparent py-0 text-[clamp(1.5rem,1rem_+_1.6vw,3rem)] text-white transition-colors hover:text-red disabled:cursor-not-allowed disabled:opacity-50"
         >
-          <span>{f.status === 'submitting' ? 'Enviando…' : f.submitLabel}</span>
+          {f.status === 'submitting' ? <span>Enviando…</span> : <RollText text={f.submitLabel} />}
           <SendArrowIcon className="h-[0.6em] w-auto" />
         </button>
         <Shape name="contact-line-h" className="h-auto w-[clamp(7rem,5rem_+_5vw,11rem)]" />

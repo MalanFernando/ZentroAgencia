@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { TerminosTabs } from "@/components/terminos/TerminosTabs";
 import terminosData from "@/data/terminos.json";
+import { Words } from "@/components/shared/motion/Words";
 
 export const metadata: Metadata = {
   title: "Términos y Condiciones",
@@ -31,14 +32,16 @@ export default function TerminosPage() {
           Volver al inicio
         </Link>
 
-        <h1 className="mt-14 text-[clamp(1.5rem,1.2rem_+_1.2vw,2.25rem)] font-bold text-white">{terminosData.title}</h1>
-        <p className="mt-4 text-base leading-relaxed text-grey">{terminosData.intro}</p>
+        <h1 data-reveal="words" className="mt-14 text-[clamp(1.5rem,1.2rem_+_1.2vw,2.25rem)] font-bold text-white">
+          <Words text={terminosData.title} />
+        </h1>
+        <p data-reveal className="mt-4 text-base leading-relaxed text-grey">{terminosData.intro}</p>
 
-        <div className="mt-16">
+        <div data-reveal className="mt-16">
           <TerminosTabs families={terminosData.families} />
         </div>
 
-        <p className="mt-20 border-t border-line/60 pt-10 text-base text-grey">
+        <p data-reveal className="mt-20 border-t border-line/60 pt-10 text-base text-grey">
           ¿Tienes dudas sobre estos términos?{" "}
           <Link href="/contactos" className="text-white underline underline-offset-4 hover:no-underline">
             Escríbenos

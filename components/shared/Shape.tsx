@@ -35,12 +35,18 @@ export function Shape({
   name,
   className,
   style,
+  draw,
 }: {
   name: ShapeName;
   className?: string;
   style?: CSSProperties;
+  /** Entrada del garabato: barrido desde la izquierda (por defecto), desde el centro o "pop" para stickers. */
+  draw?: "center" | "pop";
 }) {
   const [src, width, height] = SHAPES[name];
+  // Los garabatos pesan poco y se cargan de entrada: con carga diferida el
+  // trazo se animaba sobre una imagen aún vacía y luego aparecía de golpe.
+  const isDoodle = src.startsWith("/shapes/");
   return (
     <Image
       src={src}
@@ -49,6 +55,9 @@ export function Shape({
       width={width}
       height={height}
       draggable={false}
+      loading={isDoodle ? "eager" : undefined}
+      data-reveal={isDoodle ? "draw" : undefined}
+      data-draw={draw}
       className={["shape object-contain", className].filter(Boolean).join(" ")}
       style={style}
     />

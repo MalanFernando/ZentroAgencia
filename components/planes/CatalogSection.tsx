@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import type { CatalogItem } from "@/types/content";
 import type { PlansPageState } from "./usePlansPage";
+import { Words } from "@/components/shared/motion/Words";
 
 export function CatalogSection({ state }: { state: PlansPageState }) {
   const { catalog } = state;
@@ -19,14 +20,14 @@ export function CatalogSection({ state }: { state: PlansPageState }) {
 
   return (
     <section className="catalog-section mx-auto w-full max-w-7xl px-4 py-16 lg:px-7">
-      <h2 className="text-center text-[clamp(1.25rem,0.9rem_+_1.6vw,1.875rem)] font-bold text-white">
-        ¿Buscas algo más personalizado?
+      <h2 data-reveal="words" className="text-center text-[clamp(1.25rem,0.9rem_+_1.6vw,1.875rem)] font-bold text-white">
+        <Words text="¿Buscas algo más personalizado?" />
       </h2>
-      <p className="mx-auto mt-3 max-w-xl text-center text-base text-grey">
+      <p data-reveal className="mx-auto mt-3 max-w-xl text-center text-base text-grey">
         Selecciona las opciones que se ajusten a tus necesidades
       </p>
 
-      <div className="mx-auto mt-10 flex w-full max-w-md justify-center">
+      <div data-reveal className="mx-auto mt-10 flex w-full max-w-md justify-center">
         <div
           role="tablist"
           className="flex h-14 w-full max-w-sm items-center gap-1 rounded-full bg-card p-1.5"
@@ -58,7 +59,7 @@ export function CatalogSection({ state }: { state: PlansPageState }) {
         {catalog.description}
       </p>
 
-      <div className="relative mt-12 flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-12 lg:before:absolute lg:before:inset-y-0 lg:before:left-1/2 lg:before:w-px lg:before:bg-line lg:before:content-['']">
+      <div data-reveal className="relative mt-12 flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-12 lg:before:absolute lg:before:inset-y-0 lg:before:left-1/2 lg:before:w-px lg:before:bg-line lg:before:content-['']">
         {catalog.groups.map((group) => (
           <div key={group.id}>
             {group.heading ? (

@@ -90,11 +90,6 @@ export function usePlansPage() {
     [allCatalogItems, selectedServiceIds],
   );
 
-  const selectedIndividualServices = useMemo(
-    () => selectedServices.filter((item) => item.catalogId === "individual"),
-    [selectedServices],
-  );
-
   const selectedTotal = selectedServices.reduce((sum, item) => sum + item.price, 0);
 
   return {
@@ -115,7 +110,6 @@ export function usePlansPage() {
     selectedServiceIds,
     toggleService,
     selectedServices,
-    selectedIndividualServices,
     selectedTotal,
     catalogTitle: catalog.title,
   };

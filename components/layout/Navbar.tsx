@@ -10,11 +10,19 @@ export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [prevPathname, setPrevPathname] = useState(pathname);
+  const [scrolled, setScrolled] = useState(false);
 
   if (pathname !== prevPathname) {
     setPrevPathname(pathname);
     setOpen(false);
   }
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -31,7 +39,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className="navbar">
+      <header className="navbar" data-scrolled={scrolled || undefined}>
         <div className="navbar-inner">
           <nav
             className="navbar-desktop navbar-desktop-left"

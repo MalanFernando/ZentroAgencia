@@ -1,11 +1,18 @@
-import Image from "next/image";
 import Link from "next/link";
 import homeData from "@/data/home.json";
 import siteData from "@/data/site.json";
+import serviciosData from "@/data/servicios";
 import { ServicesTicker } from "@/components/shared/ServicesTicker";
 import { Shape } from "@/components/shared/Shape";
+import { RollText } from "@/components/shared/motion/RollText";
+import { ImageCycle } from "@/components/shared/motion/ImageCycle";
 
 const { hero } = homeData;
+const floats = serviciosData.hero.floatingImages;
+
+// Las dos imágenes del Hero se turnan al azar entre las suyas y tres fotos del
+// Hero de Servicios (float-2, float-3, float-4), sin mostrar la misma a la vez.
+const heroCycle = [hero.imageA, hero.imageB, floats[1], floats[2], floats[3]];
 
 export function Hero() {
   return (
@@ -30,12 +37,10 @@ export function Hero() {
             className="hero-image hero-image-a hero-enter"
             style={{ animationDelay: '0.05s' }}
           >
-            <Image
-              src={hero.imageA.src}
-              alt={hero.imageA.alt}
-              fill
+            <ImageCycle
+              images={heroCycle}
+              group="home-hero"
               sizes="(max-width: 1024px) 30vw, 25vw"
-              className="object-cover"
               priority
             />
           </div>
@@ -46,16 +51,17 @@ export function Hero() {
             className="hero-image hero-image-b hero-enter"
             style={{ animationDelay: '0.2s' }}
           >
-            <Image
-              src={hero.imageB.src}
-              alt={hero.imageB.alt}
-              fill
+            <ImageCycle
+              images={heroCycle}
+              start={1}
+              group="home-hero"
               sizes="(max-width: 1024px) 90vw, 45vw"
-              className="object-cover"
+              offset={2200}
             />
           </div>
 
-          <h1
+          {/* Un solo h1 por página: esta segunda línea del titular va como párrafo. */}
+          <p
             className="hero-title hero-title-secondary hero-enter"
             style={{ animationDelay: '0.1s' }}
           >
@@ -67,7 +73,7 @@ export function Hero() {
               className="hero-squiggle-2 hero-enter"
               style={{ animationDelay: '0.45s' }}
             />
-          </h1>
+          </p>
         </div>
 
         <p
@@ -82,7 +88,7 @@ export function Hero() {
           className="hero-cta hero-enter"
           style={{ animationDelay: '0.4s' }}
         >
-          {hero.ctaLabel}
+          <RollText text={hero.ctaLabel} />
         </Link>
       </div>
 

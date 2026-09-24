@@ -7,7 +7,7 @@ import { buildCatalogQuoteMessage } from "@/lib/messages";
 import type { PlansPageState } from "./usePlansPage";
 
 export function QuoteMascot({ state }: { state: PlansPageState }) {
-  const count = state.selectedIndividualServices.length;
+  const count = state.selectedServices.length;
   const visible = count > 0;
   const [justAppeared, setJustAppeared] = useState(false);
   const [hovering, setHovering] = useState(false);

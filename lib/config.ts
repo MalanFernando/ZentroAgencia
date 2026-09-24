@@ -2,6 +2,17 @@ const FALLBACK_WHATSAPP = "+593980649531";
 const FALLBACK_EMAIL = "zentroagenciamkt@gmail.com";
 const FALLBACK_SITE_URL = "http://localhost:3000";
 
+// URL pública: la definida a mano o, si falta, la que da el proveedor al compilar
+// (Vercel o Netlify), para que canonical, sitemap y OG nunca apunten a localhost.
+function resolveSiteUrl(): string {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  if (process.env.URL) return process.env.URL;
+  return FALLBACK_SITE_URL;
+}
+
 function normalizeE164(raw: string): string {
   return raw.replace(/[^\d+]/g, "");
 }
@@ -9,7 +20,7 @@ function normalizeE164(raw: string): string {
 export const siteConfig = {
   name: "Zentro",
   tagline: "Dale centro a tu marca",
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? FALLBACK_SITE_URL).replace(/\/$/, ""),
+  url: resolveSiteUrl().replace(/\/$/, ""),
   locale: "es_EC",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? FALLBACK_EMAIL,
   whatsapp: {

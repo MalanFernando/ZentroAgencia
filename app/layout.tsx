@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloatingButton } from "@/components/shared/WhatsAppFloatingButton";
+import { RevealObserver } from "@/components/shared/motion/RevealObserver";
+import { SmoothScroll } from "@/components/shared/motion/SmoothScroll";
 import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
@@ -71,11 +73,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} h-full antialiased${
         process.env.NODE_ENV === "development" ? " debug-outline" : ""
       }`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "document.documentElement.dataset.motion=matchMedia('(prefers-reduced-motion: reduce)').matches?'off':'on'",
+          }}
+        />
+      </head>
       <body className="min-h-full">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c") }}
         />
         <Navbar />
         <div className="page">
@@ -83,6 +94,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Footer />
         </div>
         <WhatsAppFloatingButton />
+        <RevealObserver />
+        <SmoothScroll />
       </body>
     </html>
   );

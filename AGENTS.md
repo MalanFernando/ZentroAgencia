@@ -88,6 +88,20 @@ When you change pricing/copy/clients, edit the JSON, not the TS. The TS wrappers
 
 `mock-mobile/`, `Docs/`, `WebMock/` and `.claude/` are local design references, git-ignored. Treat the mock as a visual reference for composition, proportions and copy — its coordinates are not values to copy.
 
+## Motion
+
+All motion lives in `components/shared/motion/` plus the `/* ---------- Motion ---------- */` block at the end of `app/globals.css`.
+
+- Gate: an inline script in `app/layout.tsx` sets `html[data-motion="on"]` before paint unless the user prefers reduced motion. Every animation is scoped to that attribute, so without JS or with reduced motion the site renders static and fully visible.
+- `RevealObserver` reveals `[data-reveal]` elements on scroll (variants: default up, `image`, `fade`, `words` with `<Words>`, `draw` for doodles). `Shape` adds `data-reveal="draw"` to every `/shapes/` doodle; `draw="center" | "pop"` changes its entrance. Doodles load eagerly and only draw once their image is loaded.
+- Reveal animations use the individual `translate` / `scale` / `rotate` properties so they compose with each element's own `transform` rotation. Don't put `data-reveal` on an element whose position relies on Tailwind `translate-*` utilities.
+- `RollText` (CTA letter roll, letters via CSS pseudo-elements so the link text stays clean), `ImageCycle` (crossfading images, optional random `group`), `VideoGlow`, `SmoothScroll` (Lenis; stops while `body` overflow is hidden). Use `scrollToElement` from `SmoothScroll` instead of native smooth `scrollIntoView`.
+
+## Deploy
+
+- `NEXT_PUBLIC_SITE_URL` sets canonical URLs, sitemap, robots and OG tags at build time. If it's missing, `lib/config.ts` falls back to the host's build variables (`VERCEL_PROJECT_PRODUCTION_URL` on Vercel, `URL` on Netlify) — never to localhost in production. Set it explicitly once a custom domain exists.
+- Security headers (partial CSP, HSTS, frame, referrer, permissions) are defined in `next.config.ts`.
+
 ## Contact form: `/api/contact`
 
 `app/api/contact/route.ts` (POST):

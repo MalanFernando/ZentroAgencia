@@ -12,10 +12,10 @@ export function PricingTable({ state }: { state: PlansPageState }) {
       id="pricing-table"
       className="pricing-table mx-auto w-full max-w-7xl scroll-mt-6 px-4 py-10 lg:px-7 lg:py-16"
     >
-      <h2 className="text-[clamp(1.25rem,0.9rem_+_1.6vw,1.875rem)] font-bold text-white">
+      <h2 data-reveal className="text-[clamp(1.25rem,0.9rem_+_1.6vw,1.875rem)] font-bold text-white">
         Plan <span className="text-red">{family.name}</span>
       </h2>
-      <p className="mt-2 text-base text-grey">
+      <p data-reveal className="mt-2 text-base text-grey">
         Detalle del plan seleccionado
       </p>
 
@@ -48,7 +48,7 @@ export function PricingTable({ state }: { state: PlansPageState }) {
         })}
       </div>
 
-      <div className="mt-6 lg:mt-10">
+      <div data-reveal className="mt-6 lg:mt-10">
         <table className="w-full border-collapse">
           <thead>
             <tr className="border-b border-line/60">

@@ -7,6 +7,10 @@ const MAX_REQUESTS = 5;
 
 export function checkRateLimit(key: string): { ok: boolean; retryAfterSeconds?: number } {
   const now = Date.now();
+  // Limpia ventanas vencidas para que el Map no crezca sin límite.
+  if (buckets.size > 1000) {
+    for (const [k, b] of buckets) if (now > b.resetAt) buckets.delete(k);
+  }
   const bucket = buckets.get(key);
 
   if (!bucket || now > bucket.resetAt) {

@@ -53,11 +53,12 @@ export function ClientsFeatured() {
 
   return (
     <section className="clients-featured">
-      <h2 className="clients-featured-title">
+      <h2 data-reveal className="clients-featured-title">
         <Multiline text={clientsSection.title} />
       </h2>
 
       <div
+        data-reveal="image"
         className={`clients-slider select-none ${dragging ? "cursor-grabbing" : "cursor-grab"}`}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}

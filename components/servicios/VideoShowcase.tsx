@@ -25,7 +25,8 @@ export function VideoShowcase() {
           return (
             <div
               key={video.id}
-              className="video-card"
+              data-reveal="image"
+              className="video-card hover-lift"
               style={{
                 marginTop: tilt.dy,
                 aspectRatio: tilt.ratio,

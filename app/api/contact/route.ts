@@ -5,6 +5,9 @@ import { checkRateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 
+// Un mensaje válido pesa unos pocos KB; se corta antes de leer cuerpos enormes.
+const MAX_BODY_BYTES = 16 * 1024;
+
 function escapeHtml(value: string) {
   return value
     .replace(/&/g, "&amp;")
@@ -29,9 +32,18 @@ export async function POST(request: Request) {
     );
   }
 
+  const length = Number(request.headers.get("content-length") ?? 0);
+  if (length > MAX_BODY_BYTES) {
+    return NextResponse.json({ ok: false, error: "invalid_body" }, { status: 413 });
+  }
+
   let body: unknown;
   try {
-    body = await request.json();
+    const raw = await request.text();
+    if (raw.length > MAX_BODY_BYTES) {
+      return NextResponse.json({ ok: false, error: "invalid_body" }, { status: 413 });
+    }
+    body = JSON.parse(raw);
   } catch {
     return NextResponse.json({ ok: false, error: "invalid_body" }, { status: 400 });
   }
@@ -66,7 +78,7 @@ export async function POST(request: Request) {
       replyTo: email,
       subject: `Nuevo contacto desde la web — ${name}`,
       html: `
-        <h2>Nuevo mensaje desde zentro.com</h2>
+        <h2>Nuevo mensaje desde la web de Zentro</h2>
         <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
         <p><strong>Correo:</strong> ${escapeHtml(email)}</p>
         <p><strong>Teléfono:</strong> ${escapeHtml(phone)}</p>

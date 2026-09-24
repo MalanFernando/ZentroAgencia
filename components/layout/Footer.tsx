@@ -44,7 +44,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-bg  pt-8 md:pt-12 lg:px-7">
       <div className="mx-auto px-4 grid max-w-7xl grid-cols-1 items-start gap-6 md:grid-cols-[1fr_auto]">
-        <div>
+        <div data-reveal>
           <p className="text-base text-white">{siteData.footer.cta}</p>
           <a
             href={`mailto:${siteConfig.contactEmail}`}
@@ -66,6 +66,7 @@ export function Footer() {
         </div>
         <Link
           href="/contactos"
+          data-reveal="fade"
           className="flex-none"
           aria-label={siteData.footer.ringLabel}
         >
@@ -74,7 +75,7 @@ export function Footer() {
       </div>
 
       <div className="mx-auto w-full max-w-7xl [container-type:inline-size]">
-        <div className="mt-[14cqw] leading-[0.6] relative flex justify-center">
+        <div data-reveal className="mt-[14cqw] leading-[0.6] relative flex justify-center">
           <p className="text-[24cqw] absolute -top-[0.40em] font-bold">Zentro</p>
         </div>
       </div>
