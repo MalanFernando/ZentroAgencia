@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function TerminosPage() {
   return (
-    <main className="mx-auto w-full max-w-7xl px-4 pb-20 pt-24 lg:px-7 lg:pb-28 lg:pt-32">
+    <main className="mx-auto w-full max-w-7xl px-4 pb-20 pt-12 lg:px-7 lg:pb-28 lg:pt-28">
       <div className="mx-auto max-w-4xl">
         <Link href="/" className="group inline-flex items-center gap-1.5 text-base text-grey transition-colors hover:text-white">
           <svg

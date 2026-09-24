@@ -34,7 +34,7 @@ export function TerminosTabs({ families }: { families: Family[] }) {
         })}
       </div>
 
-      <div className="mt-10 flex flex-col gap-10">
+      <div className="mt-8 flex flex-col gap-10">
         {family.sections.map((section) => (
           <div key={section.heading}>
             <h3 className="text-base font-semibold text-white">{section.heading}</h3>

@@ -1,25 +1,15 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import plansData from "@/data/plans";
 import type { PlanSlug } from "@/types/content";
 
 export type CatalogTab = "individual" | "adicional";
 
-const STORAGE_KEY = "zentro:plans:selected-services";
-
-function loadPersistedSelection(): Set<string> {
-  if (typeof window === "undefined") return new Set();
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return new Set();
-    const parsed = JSON.parse(raw);
-    if (!Array.isArray(parsed)) return new Set();
-    return new Set(parsed.filter((id): id is string => typeof id === "string"));
-  } catch {
-    return new Set();
-  }
-}
+// La selección de servicios vive solo mientras se está en /planes: no se
+// guarda en el navegador. Esta clave era de una versión anterior que sí la
+// guardaba; se borra para no dejar datos viejos.
+const LEGACY_STORAGE_KEY = "zentro:plans:selected-services";
 
 export function usePlansPage() {
   const [selectedFamily, setSelectedFamily] = useState<PlanSlug>("zentro");
@@ -27,21 +17,14 @@ export function usePlansPage() {
   const [catalogTab, setCatalogTab] = useState<CatalogTab>("individual");
   const [activeTierIndex, setActiveTierIndex] = useState(0);
   const [selectedServiceIds, setSelectedServiceIds] = useState<Set<string>>(new Set());
-  const hydrated = useRef(false);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- lectura única de localStorage tras montar; no hay alternativa sin esta re-renderización.
-    setSelectedServiceIds(loadPersistedSelection());
-    hydrated.current = true;
-  }, []);
-
-  useEffect(() => {
-    if (!hydrated.current) return;
     try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify([...selectedServiceIds]));
+      window.localStorage.removeItem(LEGACY_STORAGE_KEY);
     } catch {
+      // Almacenamiento bloqueado (modo privado): no hay nada que limpiar.
     }
-  }, [selectedServiceIds]);
+  }, []);
 
   const family = useMemo(
     () => plansData.families.find((f) => f.slug === selectedFamily) ?? plansData.families[0],

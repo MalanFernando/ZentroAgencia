@@ -22,7 +22,7 @@ export function ContactosHero() {
         </p>
         <Shape
           name="contact-arrow"
-          className="absolute left-[53%] top-[50%] h-auto w-[42%] max-w-[25rem] flex-none"
+          className="absolute left-[53%] top-[65%] h-auto w-[42%] max-w-[25rem] flex-none"
         />
       </div>
     </section>

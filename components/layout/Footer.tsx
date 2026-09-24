@@ -48,7 +48,7 @@ export function Footer() {
           <p className="text-base text-white">{siteData.footer.cta}</p>
           <a
             href={`mailto:${siteConfig.contactEmail}`}
-            className="mt-4 block break-all text-2xl text-white transition-colors hover:text-red"
+            className="mt-4 block break-all text-xl sm:text-2xl text-white transition-colors hover:text-red"
           >
             {siteConfig.contactEmail}
           </a>

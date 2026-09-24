@@ -10,8 +10,8 @@ import { ImageCycle } from "@/components/shared/motion/ImageCycle";
 const { hero } = homeData;
 const floats = serviciosData.hero.floatingImages;
 
-// Las dos imágenes del Hero se turnan al azar entre las suyas y tres fotos del
-// Hero de Servicios (float-2, float-3, float-4), sin mostrar la misma a la vez.
+// Las dos imágenes del Hero cambian a la vez, al azar entre las suyas y tres
+// fotos del Hero de Servicios (float-2, float-3, float-4), sin repetirse.
 const heroCycle = [hero.imageA, hero.imageB, floats[1], floats[2], floats[3]];
 
 export function Hero() {
@@ -56,7 +56,6 @@ export function Hero() {
               start={1}
               group="home-hero"
               sizes="(max-width: 1024px) 90vw, 45vw"
-              offset={2200}
             />
           </div>
 

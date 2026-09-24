@@ -16,8 +16,8 @@ function QuoteCard({
   children?: React.ReactNode;
 }) {
   return (
-    <div data-reveal className={`testimonials-item testimonials-quote hover-lift ${className}`}>
-      <div className="testimonials-card quote-card">
+    <div className={`testimonials-item testimonials-quote ${className}`}>
+      <div data-reveal className="testimonials-card quote-card">
         <span className="quote-card-logo">
           <Image
             src={quote.logo.src}
@@ -61,8 +61,9 @@ export function Testimonials() {
       <div className="testimonials-collage">
         <div className="testimonials-row">
           {ig1 && (
-            <div data-reveal="image" className="testimonials-item testimonials-ig testimonials-ig-1 hover-lift">
+            <div className="testimonials-item testimonials-ig testimonials-ig-1">
               <div
+                data-reveal="image"
                 className="testimonials-card testimonials-ig-media"
                 style={{ aspectRatio: `${ig1.width} / ${ig1.height}` }}
               >
@@ -75,6 +76,8 @@ export function Testimonials() {
                 />
               </div>
               <Shape name="testimonial-3lines-down" className="testimonials-dood testimonials-dood-a" />
+              {/* Nace bajo este globo y su curva pasa detrás de la tarjeta siguiente. */}
+              <Shape name="testimonial-left-arrow-curved" className="testimonials-dood testimonials-dood-b" />
             </div>
           )}
 
@@ -86,14 +89,14 @@ export function Testimonials() {
         <div className="testimonials-row">
           {quoteB && (
             <QuoteCard quote={quoteB} className="testimonials-quote-b">
-              <Shape name="testimonial-left-arrow-curved" className="testimonials-dood testimonials-dood-b" />
               <Shape name="testimonial-3lines-up" className="testimonials-dood testimonials-dood-c" />
             </QuoteCard>
           )}
 
           {ig2 && (
-            <div data-reveal="image" className="testimonials-item testimonials-ig testimonials-ig-2 hover-lift">
+            <div className="testimonials-item testimonials-ig testimonials-ig-2">
               <div
+                data-reveal="image"
                 className="testimonials-card testimonials-ig-media"
                 style={{ aspectRatio: `${ig2.width} / ${ig2.height}` }}
               >

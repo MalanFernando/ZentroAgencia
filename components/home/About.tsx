@@ -49,7 +49,7 @@ export function About() {
           </p>
         </div>
 
-        <div className="relative mx-auto mt-40 grid max-w-[60.5rem] grid-cols-1 gap-4 2md:grid-cols-[minmax(0,1.6fr)_minmax(0,1.2fr)_minmax(0,1.2fr)] 2md:gap-x-16 2md:gap-y-8">
+        <div className="relative mx-auto mt-40 grid max-w-[60.5rem] grid-cols-1 gap-4 2md:grid-cols-[minmax(0,1.6fr)_minmax(0,1.2fr)_minmax(0,1.2fr)] 2md:gap-x-8 2md:gap-y-6">
           <div className="order-1 mb-24 flex items-center justify-center gap-3 2md:absolute 2md:right-0 2md:top-0 2md:justify-start 2md:mb-0">
             <Shape
               name="about-left-parentesis"
@@ -75,7 +75,7 @@ export function About() {
                 style={{ animationDuration: '20s' }}
               />
             </div>
-            <p className="absolute top-[95%] left-[50%] w-max max-w-[min(90%,12rem)] -translate-y-1/2 text-sm leading-snug text-grey md:max-w-[16rem] 2md:left-[50%] 2md:max-w-[18rem]">
+            <p className="absolute top-[95%] left-[40%] w-max max-w-[min(90%,12rem)] -translate-y-1/2 text-sm leading-snug text-grey md:max-w-[16rem] 2md:left-[50%] 2md:max-w-[18rem]">
               <Multiline text={about.sideParagraph} />
             </p>
             <Shape name="mission-arrow-curly" className="absolute w-[45%] -bottom-55 -right-10 2md:bottom-auto 2md:right-auto 2md:left-[118%] 2md:top-[68%] 2md:w-1/2 2md:rotate-0" />
@@ -91,7 +91,7 @@ export function About() {
           </div>
 
           <div className="relative order-4 mt-12 justify-self-center 2md:col-start-2 2md:col-span-2 2md:row-start-1">
-            <Shape name="vision-arrow-down" className="absolute w-[clamp(7rem,7vw,5rem)] -bottom-15 -left-15 rotate-25" />
+            <Shape name="vision-arrow-down" className="absolute w-[clamp(7rem,7vw,5rem)] -bottom-15 -left-5 rotate-25" />
           </div>
 
           <div data-reveal className="order-5 mx-12 mt-16 max-w-none justify-self-end 2md:col-start-3 2md:row-start-2 2md:max-w-lg 2md:mx-0">

@@ -8,8 +8,6 @@ import { RollText } from "@/components/shared/motion/RollText";
 import { ImageCycle } from "@/components/shared/motion/ImageCycle";
 
 const { hero } = serviciosData;
-// Las fotos se turnan al azar entre las mismas del Hero, una tras otra.
-const CYCLE_STAGGER_MS = 900;
 
 export function ServiciosHero() {
   return (
@@ -22,12 +20,12 @@ export function ServiciosHero() {
             className={`services-hero-float services-hero-float-${i + 1}`}
             style={{ aspectRatio: `${img.width} / ${img.height}` }}
           >
+            {/* Las 5 fotos cambian a la vez, al azar entre las mismas del Hero. */}
             <ImageCycle
               images={hero.floatingImages}
               start={i}
               group="services-hero"
               sizes="(max-width: 1024px) 25vw, 15vw"
-              offset={i * CYCLE_STAGGER_MS}
             />
           </div>
         ))}

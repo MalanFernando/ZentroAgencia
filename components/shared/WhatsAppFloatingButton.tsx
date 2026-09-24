@@ -7,7 +7,7 @@ import { Shape } from "@/components/shared/Shape";
 const GENERAL_WHATSAPP_MESSAGE = "Hola Zentro, me gustaría más información sobre sus servicios.";
 
 const BOTTOM_BASE = 64;
-const BOTTOM_OVER_FOOTER = 144;
+const BOTTOM_OVER_FOOTER = 154;
 
 export function WhatsAppFloatingButton() {
   const ref = useRef<HTMLAnchorElement>(null);
@@ -48,7 +48,7 @@ export function WhatsAppFloatingButton() {
       className="fixed z-50 flex h-14 w-14 items-center justify-center transition-transform duration-200 hover:scale-[0.96]"
       style={{
         bottom: `${BOTTOM_BASE}px`,
-        right: "clamp(1.25rem, 1.25rem + (100vw - 22.5rem) * 0.006024, 1.5rem)",
+        right: "clamp(1rem, 1.25rem + (100vw - 18rem) * 0.006024, 1.5rem)",
       }}
     >
       <Shape name="whatsapp" className="h-10 w-10" />

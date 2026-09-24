@@ -167,14 +167,15 @@ textarea:-webkit-autofill:active {
 }
 
 .hero-image-a {
-  width: 24%;
-  aspect-ratio: 415 / 266;
+  width: 28%;
+  min-width: 150px;
+  aspect-ratio: 450 / 266;
   transform: rotate(-3deg);
 }
 
 .hero-image-b {
   width: 45%;
-  aspect-ratio: 760 / 253;
+  aspect-ratio: 700 / 253;
 }
 
 .hero-squiggle,
@@ -636,6 +637,25 @@ textarea:-webkit-autofill:active {
   mask-image: radial-gradient(ellipse at center, #000 55%, transparent 95%);
 }
 
+/* Móvil: además se desvanecen los laterales, para que las piezas se pierdan al
+   girar hacia los bordes, y las piezas crecen un poco (--grow). */
+@media (max-width: 767px) {
+  .orbit {
+    -webkit-mask-image:
+      radial-gradient(ellipse at center, #000 55%, transparent 95%),
+      linear-gradient(90deg, transparent 0%, #000 24%, #000 76%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      radial-gradient(ellipse at center, #000 55%, transparent 95%),
+      linear-gradient(90deg, transparent 0%, #000 24%, #000 76%, transparent 100%);
+    mask-composite: intersect;
+  }
+
+  .release {
+    --grow: 12px;
+  }
+}
+
 .orbit-track {
   --diameter: clamp(600px, 75vw, 1150px);
   position: absolute;
@@ -651,8 +671,10 @@ textarea:-webkit-autofill:active {
   position: absolute;
   left: var(--x);
   top: var(--y);
-  width: var(--artwork-size);
-  height: var(--artwork-size);
+  /* --grow agranda la pieza sin mover su centro. */
+  width: calc(var(--artwork-size) + var(--grow, 0px));
+  height: calc(var(--artwork-size) + var(--grow, 0px));
+  margin: calc(var(--grow, 0px) / -2) 0 0 calc(var(--grow, 0px) / -2);
   border: 0;
   padding: 0;
   background: none;
@@ -943,7 +965,7 @@ textarea:-webkit-autofill:active {
   margin-top: clamp(1.5rem, 4vw, 4rem);
   margin-inline: -1rem;
   overflow: hidden;
-  aspect-ratio: 645 / 362;
+  aspect-ratio: 540 / 362;
   border-radius: 4px;
 }
 
@@ -980,7 +1002,7 @@ textarea:-webkit-autofill:active {
   justify-content: space-between;
   gap: 0.75rem;
   padding: clamp(1rem, 3vw, 4rem) clamp(1rem, 5vw, 6rem);
-  background: linear-gradient(180deg, rgba(16, 16, 16, 0) 0%, rgba(16, 16, 16, 0.85) 100%);
+  background: linear-gradient(180deg, rgba(40, 40, 40, 0) 0%, rgba(12, 12, 12, .95) 95%);
 }
 
 .clients-slider-name {
@@ -1164,8 +1186,8 @@ textarea:-webkit-autofill:active {
 
 .testimonials-dood-b {
   left: -5%;
-  top: -150%;
-  width: 40%;
+  top: calc(100% - 1.75rem);
+  width: clamp(12.5rem, 55vw, 18.75rem);
 }
 
 .testimonials-dood-c {
@@ -1178,7 +1200,7 @@ textarea:-webkit-autofill:active {
 
 .testimonials-dood-d {
   left: 18%;
-  bottom: -70%;
+  bottom: -60%;
   width: 110%;
 }
 

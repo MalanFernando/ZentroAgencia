@@ -25,8 +25,8 @@ export function RingText({
             top: '50%',
             left: '50%',
             whiteSpace: 'nowrap',
-            fontSize: '9cqh',
-            letterSpacing: '0.02em',
+            fontSize: '9px',
+            letterSpacing: '1em',
             transformOrigin: '0 0',
             transform: `rotate(${angleStep * i}deg) translate(-50%, -40cqh)`
           }}
