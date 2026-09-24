@@ -31,9 +31,9 @@
 }
 
 /* Guía de espaciados: la clase solo se agrega en desarrollo (app/layout.tsx). */
-  .debug-outline * {
+  /* .debug-outline * {
     outline: 1px solid red;
-  }
+  } */
 
 html {
   background: var(--bg);

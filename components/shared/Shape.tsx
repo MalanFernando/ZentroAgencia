@@ -2,8 +2,8 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 
 const SHAPES = {
-  "about-left-parentesis": ["/shapes/about-left-parentesis.svg", 11, 48],
-  "about-right-parentesis": ["/shapes/about-right-parentesis.svg", 13, 48],
+  "about-left-parentesis": ["/shapes/about-left-parentesis.svg", 30, 60],
+  "about-right-parentesis": ["/shapes/about-right-parentesis.svg", 30, 60],
   "contact-3lines": ["/shapes/contact-3lines.svg", 63, 51],
   "contact-arrow": ["/shapes/contact-arrow.svg", 387, 155],
   "contact-line-h": ["/shapes/contact-line-h.svg", 109, 6],

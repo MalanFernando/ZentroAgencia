@@ -89,7 +89,7 @@ export function About() {
           </div>
 
           <div className="relative order-4 mt-12 justify-self-center 2md:col-start-2 2md:col-span-2 2md:row-start-1">
-            <Shape name="vision-arrow-down" className="absolute w-[clamp(8rem,8vw,5.5rem)] -bottom-15 -left-25" />
+            <Shape name="vision-arrow-down" className="absolute w-[clamp(7rem,7vw,5rem)] -bottom-15 -left-15 rotate-25" />
           </div>
 
           <div className="order-5 mx-12 mt-16 max-w-none justify-self-end 2md:col-start-3 2md:row-start-2 2md:max-w-lg 2md:mx-0">
