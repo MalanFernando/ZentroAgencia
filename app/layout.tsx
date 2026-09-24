@@ -53,6 +53,8 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
+  // Google Search Console (además del archivo public/google*.html).
+  verification: { google: "R0Hnq_2_avMx76TTUraDD4S9Cxy_ASu7E6GocwPW95s" },
 };
 
 const organizationJsonLd = {
