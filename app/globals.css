@@ -12,6 +12,87 @@
   --c4: rgba(245, 245, 245, 0.66);
 }
 
+/* Tono claro (blanco hueso) que ToneObserver activa al pasar por las
+   secciones con data-bg="light". Se invierten fondo y texto; el rojo se
+   mantiene. */
+html[data-tone="light"] {
+  --bg: #f7f5ef;
+  --white: #161616;
+  --grey: #5c5a55;
+  --line: #d6d1c5;
+  --card: #ece8df;
+  --surface: #e3ded3;
+}
+
+/* Más aire alrededor de las secciones de tono claro, para que el cambio de
+   fondo se lea como un paso entre secciones. */
+[data-bg="light"] {
+  margin-block: clamp(5rem, 12vw, 11rem);
+}
+
+/* Registradas como colores para que el cambio de tono se funda en vez de
+   saltar. */
+@property --bg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #101010;
+}
+
+@property --white {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #f5f5f5;
+}
+
+@property --grey {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #afafaf;
+}
+
+@property --line {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #454545;
+}
+
+@property --card {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #1a1a1a;
+}
+
+@property --surface {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #202020;
+}
+
+html {
+  transition:
+    --bg 0.5s ease,
+    --white 0.5s ease,
+    --grey 0.5s ease,
+    --line 0.5s ease,
+    --card 0.5s ease,
+    --surface 0.5s ease;
+}
+
+/* Garabatos (SVG blancos), el logo del navbar y el ícono de WhatsApp se
+   oscurecen en el tono claro. */
+img.shape[data-reveal="draw"],
+.navbar-logo img,
+a[aria-label="Escríbenos por WhatsApp"] img {
+  transition: filter 0.5s ease;
+}
+
+html[data-tone="light"] img.shape[data-reveal="draw"][data-revealed],
+html[data-tone="light"] .navbar-logo img,
+html[data-tone="light"] a[aria-label="Escríbenos por WhatsApp"] img {
+  /* hue-rotate devuelve los acentos rojos (punto del logo) a su color. */
+  filter: invert(1) hue-rotate(180deg);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-white: var(--white);
@@ -507,8 +588,8 @@ textarea:-webkit-autofill:active {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  border-bottom: 1px solid rgba(69, 69, 69, 0.6);
-  background: rgba(16, 16, 16, 0.9);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
   backdrop-filter: blur(4px);
   padding: 0.75rem 1rem;
 }
@@ -653,7 +734,7 @@ textarea:-webkit-autofill:active {
     justify-content: initial;
     padding: 1.25rem 2.5rem;
     border-bottom: 0;
-    background: rgba(16, 16, 16, 0.85);
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
     transition:
       padding 0.4s var(--ease-out-expo),
       background-color 0.4s ease,
@@ -664,7 +745,7 @@ textarea:-webkit-autofill:active {
      desde aquí el navbar es fijo). */
   .navbar[data-scrolled] {
     padding-block: 0.625rem;
-    background: rgba(16, 16, 16, 0.94);
+    background: color-mix(in srgb, var(--bg) 94%, transparent);
     backdrop-filter: blur(12px);
   }
 }
@@ -1104,7 +1185,8 @@ textarea:-webkit-autofill:active {
   font-size: clamp(1.25rem, 0.6rem + 2.8vw, 4rem);
   font-weight: 700;
   line-height: 1.1;
-  color: var(--white);
+  /* Sobre la foto: siempre claro, aunque el sitio esté en tono claro. */
+  color: #f5f5f5;
 }
 
 .clients-slider-description {
@@ -1128,7 +1210,8 @@ textarea:-webkit-autofill:active {
   justify-content: center;
   width: clamp(1.25rem, 1rem + 0.6vw, 2rem);
   height: clamp(1.25rem, 1rem + 0.6vw, 2rem);
-  color: var(--white);
+  /* Sobre la foto: siempre claro, aunque el sitio esté en tono claro. */
+  color: #f5f5f5;
 }
 
 .clients-slider-social svg {
@@ -1507,7 +1590,7 @@ textarea:-webkit-autofill:active {
   font-size: var(--hiring-num);
   font-weight: 300;
   line-height: 1;
-  color: rgba(175, 175, 175, 0.35);
+  color: color-mix(in srgb, var(--grey) 35%, transparent);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1554,7 +1637,7 @@ html[data-motion="on"] .hiring-step:not([data-revealed]) .hiring-node::after {
 .info-trigger:hover,
 .info-trigger:focus-visible {
   color: var(--grey);
-  text-decoration-color: rgba(175, 175, 175, 0.4);
+  text-decoration-color: color-mix(in srgb, var(--grey) 40%, transparent);
 }
 
 .info-dialog {
@@ -1828,7 +1911,7 @@ html[data-motion="on"] .info-dialog[open] .info-item {
   font-size: clamp(2.25rem, 1.8rem + 1.8vw, 3.5rem);
   font-weight: 300;
   line-height: 1;
-  color: rgba(175, 175, 175, 0.35);
+  color: color-mix(in srgb, var(--grey) 35%, transparent);
   font-variant-numeric: tabular-nums;
   transition: color 0.3s ease;
 }

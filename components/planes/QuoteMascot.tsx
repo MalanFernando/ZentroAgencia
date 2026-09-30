@@ -40,7 +40,7 @@ export function QuoteMascot({ state }: { state: PlansPageState }) {
       onMouseLeave={() => setHovering(false)}
     >
       <div
-        className={`relative max-w-[12rem] whitespace-normal rounded-[4px] bg-white px-3 py-2 mb-2 text-xs font-medium text-[#222] transition-all duration-300 ${
+        className={`relative max-w-[12rem] whitespace-normal rounded-[4px] bg-white px-3 py-2 mb-2 text-xs font-medium text-bg transition-all duration-300 ${
           showBubble
             ? 'translate-x-0 opacity-100'
             : 'pointer-events-none -translate-x-2 opacity-0'
@@ -69,7 +69,7 @@ export function QuoteMascot({ state }: { state: PlansPageState }) {
           className="absolute inset-0 animate-pulse rounded-full bg-red/15"
           aria-hidden="true"
         />
-        <span className="relative flex h-full w-full items-center justify-center rounded-[50%] bg-white shadow-lg shadow-black/30 transition-transform duration-200 group-hover:scale-102">
+        <span className="relative flex h-full w-full items-center justify-center rounded-[50%] bg-[#f5f5f5] shadow-[0_2px_10px_rgba(0,0,0,0.12)] transition-transform duration-200 group-hover:scale-102">
           <Image
             src="/icons/bot.svg"
             alt=""
@@ -79,7 +79,7 @@ export function QuoteMascot({ state }: { state: PlansPageState }) {
           />
           <span
             aria-hidden="true"
-            className="absolute top-1/2 left-[38%] flex h-3.5 w-3.5 translate-x-[calc(-50%+28px)] translate-y-[calc(-50%+8px)] items-center justify-center rounded-[4px] bg-red text-[9px] font-bold text-white"
+            className="absolute top-1/2 left-[38%] flex h-3.5 w-3.5 translate-x-[calc(-50%+28px)] translate-y-[calc(-50%+8px)] items-center justify-center rounded-[4px] bg-red text-[9px] font-bold text-[#f5f5f5]"
           >
             {count}
           </span>

@@ -10,7 +10,7 @@ const { process } = serviciosData;
  */
 export function Process() {
   return (
-    <section aria-labelledby="process-title" className="py-12 md:py-20">
+    <section data-bg="light" aria-labelledby="process-title" className="py-12 md:py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-7">
         <h2
           id="process-title"

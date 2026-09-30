@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloatingButton } from "@/components/shared/WhatsAppFloatingButton";
 import { RevealObserver } from "@/components/shared/motion/RevealObserver";
 import { SmoothScroll } from "@/components/shared/motion/SmoothScroll";
+import { ToneObserver } from "@/components/shared/motion/ToneObserver";
 import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
@@ -98,6 +99,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <WhatsAppFloatingButton />
         <RevealObserver />
         <SmoothScroll />
+        <ToneObserver />
       </body>
     </html>
   );

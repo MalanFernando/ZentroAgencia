@@ -77,7 +77,7 @@ export function About() {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-40 grid max-w-[60.5rem] grid-cols-1 gap-4 2md:grid-cols-[minmax(0,1.6fr)_minmax(0,1.2fr)_minmax(0,1.2fr)] 2md:gap-x-8 2md:gap-y-6">
+        <div data-bg="light" className="relative mx-auto mt-40 grid max-w-[60.5rem] grid-cols-1 gap-4 2md:grid-cols-[minmax(0,1.6fr)_minmax(0,1.2fr)_minmax(0,1.2fr)] 2md:gap-x-8 2md:gap-y-6">
           <div className="order-1 mb-24 flex items-center justify-center gap-3 2md:absolute 2md:right-0 2md:top-0 2md:justify-start 2md:mb-0">
             <Shape
               name="about-left-parentesis"
@@ -93,7 +93,7 @@ export function About() {
           </div>
 
           <div className="relative order-2 mx-auto aspect-[485/610] w-[min(70vw,100%)] max-w-[19rem] 2md:col-start-1 2md:row-start-1 2md:row-span-3 2md:mx-0">
-            <div data-reveal="drop" className="absolute inset-0 -rotate-2 overflow-hidden rounded-[4px]">
+            <div data-reveal="drop" className="absolute inset-0 -rotate-2 overflow-hidden rounded-[4px] [mask-image:linear-gradient(to_bottom,#000_68%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,#000_68%,transparent_100%)]">
               <ImageCycle images={posterCycle} sizes="(max-width: 920px) 75vw, 400px" interval={3000} />
             </div>
             <div className="absolute bottom-0 left-0 h-32 w-32 -translate-x-1/2 translate-y-1/2 text-white 2md:h-36 2md:w-36">

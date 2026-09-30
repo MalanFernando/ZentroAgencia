@@ -19,7 +19,7 @@ export function CatalogSection({ state }: { state: PlansPageState }) {
   }
 
   return (
-    <section className="catalog-section mx-auto w-full max-w-7xl px-4 py-16 lg:px-7">
+    <section data-bg="light" className="catalog-section mx-auto w-full max-w-7xl px-4 py-16 lg:px-7">
       <h2 data-reveal="words" className="text-center text-[clamp(1.25rem,0.9rem_+_1.6vw,1.875rem)] font-bold text-white">
         <Words text="¿Buscas algo más personalizado?" />
       </h2>

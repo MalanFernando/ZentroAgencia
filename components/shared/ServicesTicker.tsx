@@ -8,7 +8,7 @@ function TickerTile({ items }: { items: string[] }) {
   return (
     <div className="flex flex-none items-center">
       {items.map((label, i) => (
-        <span key={i} className="flex items-center whitespace-nowrap px-6 text-base text-[#101010]">
+        <span key={i} className="flex items-center whitespace-nowrap px-6 text-base text-bg">
           {label}
           <span className="ml-6 h-2.5 w-2.5 flex-none rounded-[4px] bg-red" />
         </span>

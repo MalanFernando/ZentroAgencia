@@ -13,7 +13,7 @@ const { hiring } = homeData;
  */
 export function Hiring() {
   return (
-    <section aria-labelledby="hiring-title" className="mt-16 py-12 md:py-20">
+    <section data-bg="light" aria-labelledby="hiring-title" className="mt-16 py-12 md:py-20">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-20 lg:px-7">
         <div className="text-center lg:sticky lg:top-32 lg:self-start lg:text-left">
           <h2
