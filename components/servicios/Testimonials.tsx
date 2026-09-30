@@ -17,7 +17,7 @@ function QuoteCard({
 }) {
   return (
     <div className={`testimonials-item testimonials-quote ${className}`}>
-      <div data-reveal className="testimonials-card quote-card">
+      <div data-reveal="jump" className="testimonials-card quote-card">
         <span className="quote-card-logo">
           <Image
             src={quote.logo.src}
@@ -63,7 +63,7 @@ export function Testimonials() {
           {ig1 && (
             <div className="testimonials-item testimonials-ig testimonials-ig-1">
               <div
-                data-reveal="image"
+                data-reveal="jump"
                 className="testimonials-card testimonials-ig-media"
                 style={{ aspectRatio: `${ig1.width} / ${ig1.height}` }}
               >
@@ -96,7 +96,7 @@ export function Testimonials() {
           {ig2 && (
             <div className="testimonials-item testimonials-ig testimonials-ig-2">
               <div
-                data-reveal="image"
+                data-reveal="jump"
                 className="testimonials-card testimonials-ig-media"
                 style={{ aspectRatio: `${ig2.width} / ${ig2.height}` }}
               >

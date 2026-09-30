@@ -28,18 +28,6 @@ No `format`/`format:check` script. There is no Prettier config — follow existi
 - Copy `.env.example` to `.env.local` and fill in `RESEND_API_KEY` (and optionally the `CONTACT_*`/`NEXT_PUBLIC_*` vars). `RESEND_API_KEY` is required for `/api/contact` to send mail; without it the endpoint returns 503 and the UI shows a "write us on WhatsApp" fallback.
 - Package manager is pnpm only. `packageManager: pnpm@11.22.0` is pinned — don't run `npm install`.
 
-## Routes
-
-`app/` (App Router):
-
-- `app/page.tsx` → `/` (Nosotros — home, marketing copy)
-- `app/contactos/page.tsx` → `/contactos` (contact form)
-- `app/planes/page.tsx` → `/planes` (plans + service catalog)
-- `app/servicios/page.tsx` → `/servicios` (services + video showcase + testimonials)
-- `app/terminos/page.tsx` → `/terminos` (terms & conditions, plain flow layout)
-- `app/api/contact/route.ts` → `POST /api/contact` (zod-validated, rate-limited, Resend-backed)
-- `app/robots.ts`, `app/sitemap.ts` → static `MetadataRoute` files; both read from `lib/config.ts`
-
 ## Architecture: layout system
 
 The original site used a coordinate-based layout (`.stage`, `--u`, `.a/.b/.t/.rot`, `lib/fluid.ts`). It has been fully removed: every page (`/`, `/servicios`, `/planes`, `/contactos`, `/terminos`) is a single responsive tree in normal document flow — no fixed stage heights, no duplicate desktop/mobile trees. Don't reintroduce coordinate positioning.
@@ -50,18 +38,6 @@ The original site used a coordinate-based layout (`.stage`, `--u`, `.a/.b/.t/.ro
 - `components/layout/Navbar.tsx` is a single responsive component; `components/layout/nav-data.ts` exposes the nav items from `data/site.json`.
 - Decorative doodles that must track content are anchored to the element they decorate (title, CTA, card) and sized in `em`/`%` of it. Where a position depends on viewport width (Servicios hero photos), it interpolates between a 375px value and a 1920px value with `clamp()` — no per-breakpoint coordinates.
 - `app/globals.css` has `.debug-outline * { outline: 1px solid red }`; `app/layout.tsx` adds that class to `<html>` only when `NODE_ENV === "development"`. It never ships to production — keep it that way.
-
-## Folder structure
-
-```
-app/            routes, metadata files (favicon.ico, icon.png, apple-icon.png, robots, sitemap), globals.css
-components/     one folder per page (home, servicios, planes, contactos, terminos) + layout/ + shared/
-hooks/          reusable client hooks (useAutoAdvance, useContinuousLoop, useDragSlide)
-lib/            config, WhatsApp messages, validation, rate limit
-data/           editable content (JSON) + typed wrappers
-types/          content types
-public/         brand/, icons/, shapes/, images/, videos/, og-image.jpg
-```
 
 Page-specific hooks (`usePlansPage`, `useContactForm`) live next to their components.
 

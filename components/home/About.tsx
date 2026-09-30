@@ -93,7 +93,7 @@ export function About() {
           </div>
 
           <div className="relative order-2 mx-auto aspect-[485/610] w-[min(70vw,100%)] max-w-[19rem] 2md:col-start-1 2md:row-start-1 2md:row-span-3 2md:mx-0">
-            <div data-reveal="image" className="absolute inset-0 -rotate-2 overflow-hidden rounded-[4px]">
+            <div data-reveal="drop" className="absolute inset-0 -rotate-2 overflow-hidden rounded-[4px]">
               <ImageCycle images={posterCycle} sizes="(max-width: 920px) 75vw, 400px" interval={3000} />
             </div>
             <div className="absolute bottom-0 left-0 h-32 w-32 -translate-x-1/2 translate-y-1/2 text-white 2md:h-36 2md:w-36">

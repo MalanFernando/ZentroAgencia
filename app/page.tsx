@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
+import { VideoShowcase } from "@/components/servicios/VideoShowcase";
 import { About } from "@/components/home/About";
 import { Methodology } from "@/components/home/Methodology";
 import { DigitalPresence } from "@/components/home/DigitalPresence";
@@ -18,6 +19,7 @@ export default function HomePage() {
   return (
     <main className="flex flex-col">
       <Hero />
+      <VideoShowcase />
       <About />
       <Methodology />
       <DigitalPresence />

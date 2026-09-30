@@ -13,20 +13,29 @@ function scrollToPricingTable(id: string) {
 export function PlanCards({ state }: { state: PlansPageState }) {
   return (
     <section className="plan-cards mx-auto w-full max-w-7xl px-4 py-10 lg:px-7 lg:py-16">
-      <div className="grid gap-6 lg:grid-cols-3">
-        {state.families.map((family) => (
-          <PlanCard key={family.slug} family={family} state={state} />
+      <div className="plan-cards-grid grid gap-6 lg:grid-cols-3">
+        {state.families.map((family, i) => (
+          <PlanCard key={family.slug} family={family} state={state} index={i} />
         ))}
       </div>
     </section>
   );
 }
 
-function PlanCard({ family, state }: { family: PlanFamily; state: PlansPageState }) {
+function PlanCard({
+  family,
+  state,
+  index,
+}: {
+  family: PlanFamily;
+  state: PlansPageState;
+  index: number;
+}) {
   const isSelected = state.selectedFamily === family.slug;
   return (
     <article
       data-reveal
+      style={{ "--i": index } as React.CSSProperties}
       className={`relative rounded-[4px] p-6 transition-colors ${
         isSelected ? "bg-card" : "bg-transparent"
       }`}

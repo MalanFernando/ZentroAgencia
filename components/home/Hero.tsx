@@ -21,15 +21,15 @@ export function Hero() {
     <section className="hero lg:mt-16">
       <div className="hero-stage">
         <div className="hero-headline">
-          {/* hero-float: posición y deriva vertical con el scroll; hero-media: inclinación y entrada. */}
+          {/* hero-float: posición y deriva vertical con el scroll; hero-media: inclinación y caída de entrada. */}
           <div className="hero-float hero-float-a">
-            <div className="hero-media hero-media-a hero-enter" style={{ animationDelay: "0.05s" }}>
+            <div className="hero-media hero-media-a hero-drop" style={{ animationDelay: "0.25s" }}>
               <LoopFromVideo src={hero.videoA.src} className="hero-media-fill" />
             </div>
           </div>
 
           <div className="hero-float hero-float-b">
-            <div className="hero-media hero-media-b hero-enter" style={{ animationDelay: "0.15s" }}>
+            <div className="hero-media hero-media-b hero-drop" style={{ animationDelay: "0.4s" }}>
               <ImageCycle images={imageBCycle} sizes="(max-width: 1024px) 34vw, 22rem" priority />
             </div>
           </div>

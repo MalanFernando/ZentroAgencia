@@ -17,9 +17,8 @@ export function ServiciosHero() {
         {hero.floatingImages.map((img, i) => (
           <div
             key={img.src}
-            data-reveal="image"
             className={`services-hero-float services-hero-float-${i + 1}`}
-            style={{ aspectRatio: `${img.width} / ${img.height}` }}
+            style={{ aspectRatio: `${img.width} / ${img.height}`, "--i": i } as React.CSSProperties}
           >
             {img.src.endsWith(".mp4") ? (
               // Video en bucle y sin audio, recortado a la proporción del espacio.

@@ -26,7 +26,7 @@ export function DigitalPresence() {
         <p data-reveal className="dp-side">
           {flattenMultiline(digitalPresence.paragraphLeft)}
         </p>
-        <div data-reveal="image" className="dp-media">
+        <div data-reveal="drop" className="dp-media">
           <LoopFromVideo
             src={digitalPresence.photo.src}
             startAt={3}

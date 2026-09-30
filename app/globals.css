@@ -1069,7 +1069,8 @@ textarea:-webkit-autofill:active {
 
 .clients-slider-slide {
   background-size: cover;
-  background-position: 0 30%;
+  /* 130px más arriba que el encuadre base (0 30%). */
+  background-position: 0 calc(30% - 130px);
   background-repeat: no-repeat;
 }
 
@@ -2196,3 +2197,315 @@ html[data-motion="on"] body::after {
     scale: none;
   }
 }
+
+/* ---------- Efectos por sección ----------
+   Todo va bajo html[data-motion="on"]: sin JS o con movimiento reducido el
+   sitio se ve estático. Los efectos ligados al scroll usan animation-timeline;
+   en navegadores sin soporte las piezas quedan quietas y visibles. */
+
+/* Caída: la pieza cae desde algo más arriba de su lugar y aterriza con un
+   leve rebote. Usa transform, así se suma a la inclinación (rotate) y al
+   desplazamiento (translate) propios de cada pieza. */
+@keyframes drop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-55%) rotate(-5deg);
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  70% {
+    transform: translateY(3%) rotate(1deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: var(--drop-rest, none);
+  }
+}
+
+/* Hero de Home: video e imagen caen al cargar (la deriva con el scroll sigue
+   en .hero-float, el cruce de imágenes dentro de la pieza). */
+html[data-motion="on"] .hero-drop {
+  animation: drop-in 1.1s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* Portada de About y video de Presencia digital: la misma caída, al entrar en
+   pantalla (RevealObserver pone data-revealed). */
+html[data-motion="on"] [data-reveal="drop"]:not([data-revealed]) {
+  opacity: 0;
+  translate: none;
+  filter: none;
+}
+
+html[data-motion="on"] [data-reveal="drop"][data-revealed] {
+  animation: drop-in 1.1s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* Carrusel AIDA: las piezas aparecen una a una en abanico, tan rápido que se
+   lee como un barrido. Solo anima scale (el hover usa transform y opacity en
+   línea) y no deja nada fijado al terminar. */
+html[data-motion="on"] [data-reveal="fan"]:not([data-revealed]) {
+  opacity: 1;
+  translate: none;
+  filter: none;
+}
+
+html[data-motion="on"] [data-reveal="fan"]:not([data-revealed]) .release {
+  scale: 0;
+}
+
+html[data-motion="on"] [data-reveal="fan"][data-revealed] .release {
+  animation: fan-in 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  animation-delay: calc(var(--n, 0) * 35ms);
+}
+
+@keyframes fan-in {
+  from {
+    scale: 0;
+  }
+}
+
+/* Testimonios: cada pieza salta desde su lateral más cercano (--side: -1
+   izquierda, 1 derecha) y aterriza en su lugar. */
+.testimonials-ig-1,
+.testimonials-quote-a {
+  --side: -1;
+}
+
+.testimonials-quote-b,
+.testimonials-ig-2,
+.testimonials-quote-c {
+  --side: 1;
+}
+
+@media (min-width: 920px) {
+  .testimonials-quote-a,
+  .testimonials-ig-2,
+  .testimonials-quote-c {
+    --side: 1;
+  }
+
+  .testimonials-quote-b {
+    --side: -1;
+  }
+}
+
+html[data-motion="on"] [data-reveal="jump"]:not([data-revealed]) {
+  opacity: 0;
+  translate: none;
+  filter: none;
+  scale: 1;
+}
+
+html[data-motion="on"] [data-reveal="jump"][data-revealed] {
+  animation: jump-in 0.95s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes jump-in {
+  0% {
+    opacity: 0;
+    translate: calc(var(--side, -1) * 55vw) 2rem;
+  }
+
+  45% {
+    opacity: 1;
+    translate: calc(var(--side, -1) * 6%) -2.25rem;
+  }
+
+  75% {
+    translate: calc(var(--side, -1) * -1%) 0.35rem;
+  }
+
+  100% {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  /* Videos (Home): caen uno a uno siguiendo el scroll. Caída corta y sin
+     giro, con frenado suave (ease-out) y tramos que se solapan para que el
+     movimiento sea continuo. Cada tarjeta ya se ve apenas empieza a bajar. */
+  .video-showcase-row {
+    view-timeline: --videos block;
+  }
+
+  html[data-motion="on"] .video-card {
+    animation: video-fall cubic-bezier(0.33, 1, 0.68, 1) both;
+    animation-timeline: --videos;
+    animation-range: cover calc(2% + var(--i, 0) * 6.5%) cover calc(32% + var(--i, 0) * 6.5%);
+  }
+
+  /* Al terminar de caer, VideoShowcase la marca con data-landed y queda fija
+     en su lugar: ya no se revierte al volver a subir. */
+  html[data-motion="on"] .video-card[data-landed] {
+    animation: none;
+  }
+
+  /* Hero de Servicios: las piezas llegan desde "detrás del espectador"
+     (grandes, fuera de foco y desplazadas hacia afuera) y se asientan, como
+     un dolly zoom. Al bajar se desvanecen. */
+  html[data-motion="on"] .services-hero-float {
+    animation:
+      portal-in 1.5s cubic-bezier(0.16, 1, 0.3, 1) both,
+      portal-out linear forwards;
+    animation-delay: calc(var(--i, 0) * 90ms), 0s;
+    animation-timeline: auto, scroll(root);
+    animation-range: normal, 0 70vh;
+  }
+
+  /* Presencia digital: la caída de entrada y el crecimiento con el scroll
+     que ya tenía, juntos (uno usa transform y el otro scale). */
+  html[data-motion="on"] .dp-media[data-revealed] {
+    animation:
+      drop-in 1.1s cubic-bezier(0.22, 1, 0.36, 1) backwards,
+      dp-grow linear both;
+    animation-timeline: auto, view();
+    animation-range: normal, entry 0% cover 45%;
+  }
+
+  /* Slider de clientes: crece hasta su tamaño real mientras entra. */
+  html[data-motion="on"] .clients-slider {
+    animation: slider-grow linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+  }
+
+  /* Planes: cada bloque aparece mientras se hace scroll, no por tiempo, en un
+     tramo largo para que se note. Los títulos palabra por palabra mantienen
+     su entrada propia. */
+  html[data-motion="on"] .plans-page [data-reveal]:not([data-reveal="words"]) {
+    animation: scroll-rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 55vh;
+  }
+
+  /* Las tarjetas de planes no siguen el scroll: suelen estar a la vista al
+     cargar, así que entran por su cuenta (abajo), una por una. */
+  html[data-motion="on"] .plans-page .plan-cards-grid > [data-reveal] {
+    animation: none;
+  }
+}
+
+/* Solo translate/opacity: no pisa la inclinación en línea (transform). */
+@keyframes video-fall {
+  from {
+    opacity: 0;
+    translate: 0 -55%;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+@keyframes portal-in {
+  from {
+    opacity: 0;
+    scale: 3.2;
+    filter: blur(14px);
+    translate: calc(var(--dx, 0) * 80%) calc(var(--dy, 0) * 80%);
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+    filter: none;
+    translate: none;
+  }
+}
+
+/* Sin "from": parte de lo que dejó portal-in. */
+@keyframes portal-out {
+  to {
+    opacity: 0;
+    scale: 0.8;
+    filter: blur(8px);
+  }
+}
+
+.dp-media {
+  --drop-rest: rotate(1deg);
+}
+
+.services-hero-float-1 {
+  --dx: -1;
+  --dy: -1;
+}
+
+.services-hero-float-2 {
+  --dx: 0;
+  --dy: -1;
+}
+
+.services-hero-float-3 {
+  --dx: 1;
+  --dy: -1;
+}
+
+.services-hero-float-4 {
+  --dx: -1;
+  --dy: 1;
+}
+
+.services-hero-float-5 {
+  --dx: 1;
+  --dy: 1;
+}
+
+@keyframes slider-grow {
+  from {
+    scale: 0.72;
+    opacity: 0.4;
+  }
+
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-rise {
+  from {
+    opacity: 0;
+    translate: 0 4rem;
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    translate: none;
+    filter: none;
+  }
+}
+
+/* Tarjetas de planes: aparecen una por una al llegar a ellas (--i), más
+   despacio que el resto de entradas. Al estar apiladas en móvil, cada una
+   entra cuando se alcanza. */
+html[data-motion="on"] .plans-page .plan-cards-grid > [data-reveal][data-revealed] {
+  animation: plan-card-in 1.1s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 280ms);
+}
+
+@media (max-width: 1023px) {
+  html[data-motion="on"] .plans-page .plan-cards-grid > [data-reveal][data-revealed] {
+    animation-delay: 0s;
+  }
+}
+
+@keyframes plan-card-in {
+  from {
+    opacity: 0;
+    translate: 0 4rem;
+    filter: blur(8px);
+  }
+}
+

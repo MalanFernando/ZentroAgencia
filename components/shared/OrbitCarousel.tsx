@@ -104,6 +104,7 @@ export function OrbitCarousel({ tiles, className = "" }: OrbitCarouselProps) {
               style={
                 {
                   "--artwork-size": `${ARTWORK_PCT}%`,
+                  "--n": i,
                   "--x": `${x}%`,
                   "--y": `${y}%`,
                   "--rotate": `${rotateDeg}deg`,

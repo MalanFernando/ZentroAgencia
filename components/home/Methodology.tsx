@@ -9,7 +9,7 @@ const { methodology, aidaDetail } = homeData;
 export function Methodology() {
   return (
     <section className="methodology mt-16">
-      <div data-reveal="fade" className="orbit-shell">
+      <div data-reveal="fan" className="orbit-shell">
         <OrbitCarousel tiles={methodology.tiles} />
         <div className="orbit-text">
           <h2 data-reveal className="methodology-title">
