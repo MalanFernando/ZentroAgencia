@@ -6,6 +6,7 @@ import { Shape } from "@/components/shared/Shape";
 import { Words } from "@/components/shared/motion/Words";
 import { RollText } from "@/components/shared/motion/RollText";
 import { ImageCycle } from "@/components/shared/motion/ImageCycle";
+import { LoopFromVideo } from "@/components/shared/LoopFromVideo";
 
 const { hero } = serviciosData;
 
@@ -20,13 +21,18 @@ export function ServiciosHero() {
             className={`services-hero-float services-hero-float-${i + 1}`}
             style={{ aspectRatio: `${img.width} / ${img.height}` }}
           >
-            {/* Las 5 fotos cambian a la vez, al azar entre las mismas del Hero. */}
-            <ImageCycle
-              images={hero.floatingImages}
-              start={i}
-              group="services-hero"
-              sizes="(max-width: 1024px) 25vw, 15vw"
-            />
+            {img.src.endsWith(".mp4") ? (
+              // Video en bucle y sin audio, recortado a la proporción del espacio.
+              <LoopFromVideo src={img.src} className="absolute inset-0 h-full w-full object-cover" />
+            ) : (
+              // Las fotos cambian a la vez, al azar entre las del grupo.
+              <ImageCycle
+                images={hero.cyclePool}
+                start={Math.max(0, hero.cyclePool.findIndex((p) => p.src === img.src))}
+                group="services-hero"
+                sizes="(max-width: 1024px) 25vw, 15vw"
+              />
+            )}
           </div>
         ))}
 

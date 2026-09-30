@@ -6,14 +6,12 @@ import { RingText } from '@/components/shared/RingText';
 import { Shape } from '@/components/shared/Shape';
 import { Words } from '@/components/shared/motion/Words';
 import { ImageCycle } from '@/components/shared/motion/ImageCycle';
-import serviciosData from '@/data/servicios';
 import { InfoDialog } from '@/components/shared/InfoDialog';
 
 const { about, aboutWhy } = homeData;
-const floats = serviciosData.hero.floatingImages;
 
-// La portada se turna con dos fotos del Hero de Servicios.
-const posterCycle = [about.posterImage, floats[2], floats[0]];
+// La portada se turna con las demás portadas de campaña.
+const posterCycle = [about.posterImage, ...about.posterExtras];
 
 export function About() {
   return (
@@ -105,7 +103,7 @@ export function About() {
                 style={{ animationDuration: '20s' }}
               />
             </div>
-            <p className="absolute top-[95%] left-[40%] w-max max-w-[min(90%,12rem)] -translate-y-1/2 text-sm leading-snug text-grey md:max-w-[16rem] 2md:left-[50%] 2md:max-w-[18rem]">
+            <p className="absolute top-[95%] left-[40%] w-max max-w-[min(90%,12rem)] -translate-y-1/2 text-sm leading-snug text-white md:max-w-[16rem] 2md:left-[50%] 2md:max-w-[18rem]">
               <Multiline text={about.sideParagraph} />
             </p>
             <Shape name="mission-arrow-curly" className="absolute w-[45%] -bottom-55 -right-10 2md:bottom-auto 2md:right-auto 2md:left-[118%] 2md:top-[68%] 2md:w-1/2 2md:rotate-0" />

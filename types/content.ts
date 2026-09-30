@@ -21,7 +21,10 @@ export type ServiciosContent = {
     paragraph: string;
     ctaLabel: string;
     ctaHref: string;
+    /** Espacios flotantes: width/height fijan la proporción del espacio; un .mp4 se muestra como video. */
     floatingImages: { src: string; alt: string; width: number; height: number }[];
+    /** Imágenes entre las que se turnan los espacios con foto. */
+    cyclePool: { src: string; alt: string }[];
   };
   videoShowcase: { id: string; src: string; alt: string }[];
   clientsSection: {
